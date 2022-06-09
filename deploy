@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -o errexit -o nounset -o pipefail
+
+touch lock
+exec {fd}< lock
+if ! flock -n $fd; then
+    echo already deploying >&2
+    exit 1
+fi
+
+remote=root@discuss.grapheneos.org
+
+rsync -rptcv --fsync --chmod=D755,F644 --delete nginx/nginx.conf $remote:/etc/nginx/nginx.conf
+rsync -rptcv --fsync --chmod=D755,F644 --delete nginx/mime.types $remote:/etc/nginx/mime.types
+rsync -rptcv --fsync --chmod=D755,F644 --delete nginx/snippets/ $remote:/etc/nginx/snippets
+ssh $remote nginx -s reload
+
+echo
