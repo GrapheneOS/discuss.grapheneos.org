@@ -10,6 +10,7 @@
 
 # this is only for the mysqld standalone daemon
 [mysqld]
+skip-networking
 
 #
 # * Galera-related settings
@@ -25,7 +26,7 @@
 #
 # Allow server to accept connections on all interfaces.
 #
-bind-address=localhost
+#bind-address=0.0.0.0
 #
 # Optional setting
 #wsrep_slave_threads=1
