@@ -9,6 +9,8 @@ if ! flock -n $fd; then
     exit 1
 fi
 
+gixy nginx/nginx.conf
+
 remote=root@discuss.grapheneos.org
 
 rsync -rptcv --fsync --chmod=D755,F644 --delete nginx/nginx.conf $remote:/etc/nginx/nginx.conf
