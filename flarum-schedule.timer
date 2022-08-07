@@ -1,0 +1,9 @@
+[Unit]
+Description=Run flarum scheduler every minute
+
+[Timer]
+OnCalendar=minutely
+AccuracySec=5s
+
+[Install]
+WantedBy=timers.target

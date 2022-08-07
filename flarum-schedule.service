@@ -1,0 +1,9 @@
+[Unit]
+Description=Flarum scheduler
+
+[Service]
+CPUSchedulingPolicy=batch
+ExecStart=/usr/bin/php flarum schedule:run
+Type=oneshot
+User=flarum
+WorkingDirectory=/opt/flarum
