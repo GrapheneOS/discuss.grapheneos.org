@@ -4,6 +4,15 @@ Description=Flarum scheduler
 [Service]
 CPUSchedulingPolicy=batch
 ExecStart=/usr/bin/php flarum schedule:run
+PrivateDevices=true
+PrivateTmp=true
+ProtectControlGroups=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+ProtectSystem=full
+RestrictAddressFamilies=AF_INET AF_INET6 AF_NETLINK AF_UNIX
+RestrictNamespaces=true
+RestrictRealtime=true
 Type=oneshot
 User=flarum
 WorkingDirectory=/opt/flarum
