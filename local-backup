@@ -2,7 +2,7 @@
 
 set -o errexit -o nounset -o pipefail
 
-remote=root@discuss.grapheneos.org
+remote=flarum-admin@discuss.grapheneos.org
 
 timestamp=$(date -u +%Y-%m-%dT%H:%m:%SZ)
 ssh $remote "rm -rf local-backup"

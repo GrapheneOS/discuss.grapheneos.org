@@ -31,5 +31,5 @@ SystemCallFilter=@system-service
 SystemCallFilter=~@privileged @resources @obsolete
 Type=oneshot
 UMask=0077
-User=root
-WorkingDirectory=/root
+User=flarum-admin
+WorkingDirectory=/home/flarum-admin
