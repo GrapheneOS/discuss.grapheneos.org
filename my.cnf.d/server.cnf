@@ -10,6 +10,7 @@
 
 # this is only for the mysqld standalone daemon
 [mysqld]
+innodb_buffer_pool_size=1G
 skip-networking
 
 #
