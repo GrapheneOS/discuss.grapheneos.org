@@ -19,6 +19,8 @@ rsync -rptcv --fsync --chmod=D755,F644 --delete nginx/nginx.conf $remote:/etc/ng
 rsync -rptcv --fsync --chmod=D755,F644 --delete nginx/mime.types $remote:/etc/nginx/mime.types
 rsync -rptcv --fsync --chmod=D755,F644 --delete nginx/snippets/ $remote:/etc/nginx/snippets
 rsync -ptcv --fsync --chmod=D755,F644 my.cnf.d/server.cnf $remote:/etc/my.cnf.d/server.cnf
+rsync -ptcv --fsync --chmod=D755,F644 php/php.ini $remote:/etc/php/php.ini
+rsync -ptcv --fsync --chmod=D755,F644 php/php-fpm.d/ $remote:/etc/php/php-fpm.d
 ssh $remote nginx -s reload
 
 echo
