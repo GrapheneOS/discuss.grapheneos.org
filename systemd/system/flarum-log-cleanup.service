@@ -1,0 +1,39 @@
+[Unit]
+Description=Flarum log cleanup
+
+[Service]
+CapabilityBoundingSet=
+CPUSchedulingPolicy=batch
+ExecStart=/usr/bin/find -maxdepth 1 -name flarum-*-*-*.log -mtime +10 -delete
+IPAddressDeny=any
+LockPersonality=true
+NoNewPrivileges=true
+MemoryDenyWriteExecute=true
+PrivateDevices=true
+PrivateIPC=true
+PrivateTmp=true
+PrivateNetwork=true
+PrivateUsers=true
+ProcSubset=pid
+ProtectClock=true
+ProtectControlGroups=true
+ProtectHome=true
+ProtectHostname=true
+ProtectKernelLogs=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+ProtectProc=invisible
+ProtectSystem=strict
+ReadWritePaths=/opt/flarum/storage/logs
+RemoveIPC=true
+RestrictAddressFamilies=none
+RestrictNamespaces=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged @resources @obsolete
+Type=oneshot
+UMask=0077
+User=flarum
+WorkingDirectory=/opt/flarum/storage/logs

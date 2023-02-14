@@ -1,0 +1,9 @@
+[Unit]
+Description=Run flarum log cleanup every day
+
+[Timer]
+OnCalendar=daily
+AccuracySec=1h
+
+[Install]
+WantedBy=timers.target
