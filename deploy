@@ -23,10 +23,8 @@ rsync -ptcv --fsync --chmod=D755,F644 php/php.ini $remote:/etc/php/php.ini
 rsync -rptcv --fsync --chmod=D755,F644 php/php-fpm.d/ $remote:/etc/php/php-fpm.d
 rsync -ptcv --fsync --chmod=D755,F644 php-legacy/php.ini $remote:/etc/php-legacy/php.ini
 rsync -rptcv --fsync --chmod=D755,F644 php-legacy/php-fpm.d/ $remote:/etc/php-legacy/php-fpm.d
-rsync -ptcv --fsync --chmod=644 systemd/system/flarum-log-cleanup.{timer,service} $remote:/etc/systemd/system/
 rsync -ptcv --fsync --chmod=755 remote-backup $remote:/usr/local/bin/remote-backup
-rsync -ptcv --fsync --chmod=644 systemd/system/remote-backup.timer $remote:/etc/systemd/system/remote-backup.timer
-rsync -ptcv --fsync --chmod=644 systemd/system/remote-backup.service $remote:/etc/systemd/system/remote-backup.service
+rsync -prctv --chmod=D755,F644 systemd/system/ $remote:/etc/systemd/system
 ssh $remote nginx -s reload
 
 echo
