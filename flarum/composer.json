@@ -1,0 +1,52 @@
+{
+    "name": "flarum/flarum",
+    "description": "Delightfully simple forum software.",
+    "type": "project",
+    "keywords": [
+        "forum",
+        "discussion"
+    ],
+    "homepage": "https://flarum.org/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Flarum",
+            "email": "info@flarum.org",
+            "homepage": "https://flarum.org/team"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/flarum/core/issues",
+        "source": "https://github.com/flarum/flarum",
+        "docs": "https://docs.flarum.org/"
+    },
+    "require": {
+        "flarum/approval": "*",
+        "flarum/bbcode": "*",
+        "flarum/core": "^1.5",
+        "flarum/emoji": "*",
+        "flarum/flags": "*",
+        "flarum/lang-english": "*",
+        "flarum/likes": "*",
+        "flarum/lock": "*",
+        "flarum/markdown": "*",
+        "flarum/mentions": "*",
+        "flarum/nicknames": "*",
+        "flarum/pusher": "*",
+        "flarum/statistics": "*",
+        "flarum/sticky": "*",
+        "flarum/subscriptions": "*",
+        "flarum/suspend": "*",
+        "flarum/tags": "*",
+        "fof/filter": "*",
+        "fof/nightmode": "*",
+        "fof/sitemap": "^2.0",
+        "fof/spamblock": "^1.1",
+        "fof/user-bio": "*"
+    },
+    "config": {
+        "classmap-authoritative": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}

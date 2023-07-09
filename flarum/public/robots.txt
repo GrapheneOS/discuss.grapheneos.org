@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://discuss.grapheneos.org/sitemap.xml
