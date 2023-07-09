@@ -1,0 +1,15 @@
+#!/bin/bash
+
+shopt -s extglob nullglob
+
+cd /opt/flarum/public/assets
+
+find -name '*.gz' -o -name '*.br' -delete
+for f in *.*(css|js|js.map); do
+    brotli $f -o $f.br.tmp
+    mv $f.br.tmp $f.br
+
+    zopfli $f -c > $f.gz.tmp
+    touch -r $f $f.gz.tmp
+    mv $f.gz.tmp $f.gz
+done
