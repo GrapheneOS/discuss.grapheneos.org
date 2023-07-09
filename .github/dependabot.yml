@@ -10,3 +10,8 @@ updates:
     schedule:
       interval: daily
     target-branch: main
+  - package-ecosystem: composer
+    directory: "/flarum"
+    schedule:
+      interval: daily
+    target-branch: main
