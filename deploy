@@ -23,7 +23,7 @@ rsync -ptcv --fsync --chmod=D755,F644 php/php.ini $remote:/etc/php/php.ini
 rsync -rptcv --fsync --chmod=D755,F644 php/php-fpm.d/ $remote:/etc/php/php-fpm.d
 rsync -ptcv --fsync --chmod=D755,F644 php-legacy/php.ini $remote:/etc/php-legacy/php.ini
 rsync -rptcv --fsync --chmod=D755,F644 php-legacy/php-fpm.d/ $remote:/etc/php-legacy/php-fpm.d
-rsync -ptcv --fsync --chmod=755 remote-backup $remote:/usr/local/bin/remote-backup
+rsync -ptcv --fsync --chmod=755 {flarum-asset-compress,flarum-deploy,remote-backup} $remote:/usr/local/bin/
 rsync -prctv --chmod=D755,F644 systemd/system/ $remote:/etc/systemd/system
 ssh $remote nginx -s reload
 
