@@ -7,6 +7,8 @@ find flarum/public/assets/ -name '*.gz' -o -name '*.br' -delete
 su flarum-admin -c "rsync -tv flarum-staging/composer.{lock,json} flarum/"
 systemctl stop php-fpm
 su flarum-admin -c "rsync -tvr --delete flarum-staging/vendor/ flarum/vendor"
-systemctl start php-fpm
+chown -R flarum:flarum flarum/public/assets
 su flarum -c "php flarum migrate; php flarum cache:clear; php flarum assets:publish"
-su flarum -c flarum-asset-compress
+chown -R flarum-admin:flarum-admin flarum/public/assets
+systemctl start php-fpm
+su flarum-admin -c flarum-asset-compress
