@@ -1820,16 +1820,16 @@
         },
         {
             "name": "flarum/mentions",
-            "version": "v1.8.0",
+            "version": "v1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/mentions.git",
-                "reference": "192886f5a73318e191c3dc3207e5746258f0e3ae"
+                "reference": "8789becf13a5813d7e819d382568ab0880f5f9c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/mentions/zipball/192886f5a73318e191c3dc3207e5746258f0e3ae",
-                "reference": "192886f5a73318e191c3dc3207e5746258f0e3ae",
+                "url": "https://api.github.com/repos/flarum/mentions/zipball/8789becf13a5813d7e819d382568ab0880f5f9c7",
+                "reference": "8789becf13a5813d7e819d382568ab0880f5f9c7",
                 "shasum": ""
             },
             "require": {
@@ -1900,7 +1900,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2023-05-20T15:08:42+00:00"
+            "time": "2023-07-06T10:56:10+00:00"
         },
         {
             "name": "flarum/nicknames",
@@ -5822,16 +5822,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.67.0",
+            "version": "2.68.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "c1001b3bc75039b07f38a79db5237c4c529e04c8"
+                "reference": "4f991ed2a403c85efbc4f23eb4030063fdbe01da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/c1001b3bc75039b07f38a79db5237c4c529e04c8",
-                "reference": "c1001b3bc75039b07f38a79db5237c4c529e04c8",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/4f991ed2a403c85efbc4f23eb4030063fdbe01da",
+                "reference": "4f991ed2a403c85efbc4f23eb4030063fdbe01da",
                 "shasum": ""
             },
             "require": {
@@ -5920,7 +5920,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-25T22:09:47+00:00"
+            "time": "2023-06-20T18:29:04+00:00"
         },
         {
             "name": "nette/schema",
@@ -9846,5 +9846,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
