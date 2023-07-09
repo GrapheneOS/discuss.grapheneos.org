@@ -42,6 +42,7 @@
         "fof/nightmode": "*",
         "fof/sitemap": "^2.0",
         "fof/spamblock": "^1.1",
+        "fof/terms": "^1.2",
         "fof/user-bio": "*"
     },
     "config": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f8646bd91814fd2e1be23c33b5e01481",
+    "content-hash": "664332d25aff82383d41e77ae81fbc78",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -2844,6 +2844,82 @@
                 }
             ],
             "time": "2022-11-02T00:13:11+00:00"
+        },
+        {
+            "name": "fof/terms",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/terms.git",
+                "reference": "eb1a95cb48d8504b22fdb98225166099742d1a3a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/terms/zipball/eb1a95cb48d8504b22fdb98225166099742d1a3a",
+                "reference": "eb1a95cb48d8504b22fdb98225166099742d1a3a",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.2.0"
+            },
+            "conflict": {
+                "reflar/user-management": "^0.1.0"
+            },
+            "replace": {
+                "flagrow/terms": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Terms",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-paperclip",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    }
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/11714"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Terms\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Clark Winkelmann",
+                    "email": "clark.winkelmann@gmail.com",
+                    "homepage": "https://clarkwinkelmann.com/"
+                }
+            ],
+            "description": "Ask users to accept terms of use before using the forum",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "Policy",
+                "extension",
+                "flarum",
+                "terms",
+                "tos"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/11714",
+                "issues": "https://github.com/FriendsOfFlarum/terms/issues",
+                "source": "https://github.com/FriendsOfFlarum/terms"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2023-03-15T09:55:19+00:00"
         },
         {
             "name": "fof/user-bio",
