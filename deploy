@@ -22,5 +22,3 @@ rsync -rptcv --chmod=D755,F644 --fsync --preallocate php-legacy/{php.ini,php-fpm
 rsync -ptcv --chmod=755 --fsync --preallocate {flarum-asset-compress,flarum-deploy,remote-backup} $remote:/usr/local/bin/
 rsync -prctv --chmod=D755,F644 --fsync --preallocate systemd/system/ $remote:/etc/systemd/system
 ssh $remote nginx -s reload
-
-echo
