@@ -26,6 +26,7 @@ return [
 <link rel="mask-icon" href="/780febcc.mask-icon.svg" color="#1a1a1a"/>
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <link rel="manifest" href="/manifest.webmanifest"/>
+<link rel="me" href="https://grapheneos.social/@GrapheneOS"/>
             ';
         })
 ];
