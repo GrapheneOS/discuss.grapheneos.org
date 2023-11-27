@@ -2785,16 +2785,16 @@
         },
         {
             "name": "fof/spamblock",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/spamblock.git",
-                "reference": "1fa4d6157fd7772b6d3cedc6d0d52ed88495abf2"
+                "reference": "259c1966f9fecca1b90012807fb18745f091961c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/spamblock/zipball/1fa4d6157fd7772b6d3cedc6d0d52ed88495abf2",
-                "reference": "1fa4d6157fd7772b6d3cedc6d0d52ed88495abf2",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/spamblock/zipball/259c1966f9fecca1b90012807fb18745f091961c",
+                "reference": "259c1966f9fecca1b90012807fb18745f091961c",
                 "shasum": ""
             },
             "require": {
@@ -2864,7 +2864,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2023-11-12T16:00:58+00:00"
+            "time": "2023-11-16T08:27:02+00:00"
         },
         {
             "name": "fof/user-bio",
