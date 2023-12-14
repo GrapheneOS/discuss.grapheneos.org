@@ -41,7 +41,7 @@
         "fof/anti-spam": "*",
         "fof/filter": "*",
         "fof/nightmode": "*",
-        "fof/sitemap": "^2.0",
+        "fof/sitemap": "*",
         "fof/user-bio": "*"
     },
     "config": {
