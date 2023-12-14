@@ -38,10 +38,10 @@
         "flarum/subscriptions": "*",
         "flarum/suspend": "*",
         "flarum/tags": "*",
+        "fof/anti-spam": "*",
         "fof/filter": "*",
         "fof/nightmode": "*",
         "fof/sitemap": "^2.0",
-        "fof/spamblock": "^1.1",
         "fof/user-bio": "*"
     },
     "config": {
