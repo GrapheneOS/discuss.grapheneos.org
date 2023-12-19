@@ -1,5 +1,5 @@
 [Unit]
-Description=Daily Stop Forum Spam data update
+Description=Stop Forum Spam daily data update
 
 [Timer]
 OnCalendar=daily

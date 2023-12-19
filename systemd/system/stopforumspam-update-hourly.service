@@ -1,10 +1,10 @@
 [Unit]
-Description=Stop Forum Spam daily data update
+Description=Stop Forum Spam hourly data update
 
 [Service]
 CapabilityBoundingSet=
 CPUSchedulingPolicy=batch
-ExecStart=/usr/local/bin/stopforumspam-update daily
+ExecStart=/usr/local/bin/stopforumspam-update hourly
 IOSchedulingPriority=7
 LockPersonality=true
 MemoryDenyWriteExecute=true
