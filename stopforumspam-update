@@ -4,6 +4,6 @@ set -o errexit -o nounset -o pipefail
 
 curl --fail-with-body https://www.stopforumspam.com/downloads/toxic_ip_cidr.txt | awk '{ print $1 " 1;" }' > /etc/nginx/stopforumspam-toxic_ip_cidr.conf.new
 mv /etc/nginx/stopforumspam-toxic_ip_cidr.conf.new /etc/nginx/stopforumspam-toxic_ip_cidr.conf
-curl --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_90_ipv46.zip | gunzip | awk '{ print $1 " 1;" }' > /etc/nginx/stopforumspam-listed_ip_90_ipv46.conf.new
-mv /etc/nginx/stopforumspam-listed_ip_90_ipv46.conf.new /etc/nginx/stopforumspam-listed_ip_90_ipv46.conf
+curl --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30_ipv46.zip | gunzip | awk '{ print $1 " 1;" }' > /etc/nginx/stopforumspam-listed_ip_30_ipv46.conf.new
+mv /etc/nginx/stopforumspam-listed_ip_30_ipv46.conf.new /etc/nginx/stopforumspam-listed_ip_30_ipv46.conf
 nginx -s reload
