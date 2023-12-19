@@ -20,7 +20,7 @@ if [[ $mode == hourly ]]; then
     curl --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1.zip | gunzip | awk '{ print $1 " 1;" }' > stopforumspam-listed_ip_1_ipv46.conf.new
     mv stopforumspam-listed_ip_1_ipv46.conf.new stopforumspam-listed_ip_1_ipv46.conf
 
-    cat stopforumspam-listed_ip_30_ipv46.conf stopforumspam-listed_ip_1_ipv46.conf | sort -u > stopforumspam-listed_ip_merged_ipv46.conf
+    sort -u stopforumspam-listed_ip_30_ipv46.conf stopforumspam-listed_ip_1_ipv46.conf > stopforumspam-listed_ip_merged_ipv46.conf
 
     nginx -s reload
 fi
