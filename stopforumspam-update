@@ -17,7 +17,7 @@ if [[ $mode == daily ]]; then
 fi
 
 if [[ $mode == hourly ]]; then
-    curl --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1.zip | gunzip > stopforumspam-listed_ip_1_ipv46.txt.new
+    curl --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1_ipv46.zip | gunzip > stopforumspam-listed_ip_1_ipv46.txt.new
     mv stopforumspam-listed_ip_1_ipv46.txt.new stopforumspam-listed_ip_1_ipv46.txt
 
     curl --fail-with-body https://check.torproject.org/torbulkexitlist | sort -u > torbulkexitlist.txt.new
