@@ -15,7 +15,7 @@ gixy nginx/nginx.conf
 
 remote=root@discuss.grapheneos.org
 
-rsync -rptcv --chmod=D755,F644 --delete --fsync --preallocate nginx/{nginx.conf,mime.types,snippets} $remote:/etc/nginx/
+rsync -rptcv --chmod=D755,F644 --delete --fsync --preallocate nginx/{nginx.conf,mime.types,snippets,blocked.conf} $remote:/etc/nginx/
 rsync -ptcv --chmod=D755,F644 --fsync --preallocate my.cnf.d/server.cnf $remote:/etc/my.cnf.d/server.cnf
 rsync -rptcv --chmod=D755,F644 --fsync --preallocate php/{php.ini,php-fpm.d} $remote:/etc/php/
 rsync -rptcv --chmod=D755,F644 --fsync --preallocate php-legacy/{php.ini,php-fpm.d} $remote:/etc/php-legacy/
