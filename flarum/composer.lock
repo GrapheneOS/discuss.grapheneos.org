@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8eb6ad112d4781bcb3e5e291e4e26df2",
+    "content-hash": "bc45597731eeafeb49022f7d9397057d",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -2768,6 +2768,93 @@
                 }
             ],
             "time": "2023-11-12T15:28:44+00:00"
+        },
+        {
+            "name": "fof/moderator-notes",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/moderator-notes.git",
+                "reference": "fe2d94eef4dfc642734efeda62c00b2d8360a528"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/moderator-notes/zipball/fe2d94eef4dfc642734efeda62c00b2d8360a528",
+                "reference": "fe2d94eef4dfc642734efeda62c00b2d8360a528",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.3.0"
+            },
+            "require-dev": {
+                "flarum/core": "*@dev",
+                "flarum/markdown": "*@dev",
+                "flarum/phpstan": "*",
+                "flarum/testing": "^1.0.0",
+                "fof/impersonate": "*",
+                "symfony/var-dumper": "*"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "FoF Moderator Notes",
+                    "category": "feature",
+                    "icon": {
+                        "name": "fas fa-sticky-note",
+                        "backgroundColor": "#e74c3c",
+                        "color": "#fff"
+                    },
+                    "optional-dependencies": [
+                        "fof/impersonate"
+                    ]
+                },
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/22925"
+                },
+                "flarum-cli": {
+                    "modules": {
+                        "githubActions": true
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\ModeratorNotes\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "IanM",
+                    "email": "ian@blomstra.net",
+                    "role": "Developer"
+                },
+                {
+                    "name": "David Sevilla Martin",
+                    "email": "me+fof@datitisev.me",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Create private notes for your forum users",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/22925",
+                "issues": "https://github.com/FriendsOfFlarum/moderator-notes/issues",
+                "source": "https://github.com/FriendsOfFlarum/moderator-notes"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2023-12-20T10:39:36+00:00"
         },
         {
             "name": "fof/nightmode",

@@ -40,6 +40,7 @@
         "flarum/tags": "*",
         "fof/anti-spam": "*",
         "fof/filter": "*",
+        "fof/moderator-notes": "*",
         "fof/nightmode": "*",
         "fof/sitemap": "*",
         "fof/user-bio": "*"
