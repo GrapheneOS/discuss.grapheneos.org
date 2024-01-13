@@ -1889,16 +1889,16 @@
         },
         {
             "name": "flarum/mentions",
-            "version": "v1.8.2",
+            "version": "v1.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/mentions.git",
-                "reference": "8789becf13a5813d7e819d382568ab0880f5f9c7"
+                "reference": "026b261ccd65153c961c0c28d6c8c7f42e2a1ddf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/mentions/zipball/8789becf13a5813d7e819d382568ab0880f5f9c7",
-                "reference": "8789becf13a5813d7e819d382568ab0880f5f9c7",
+                "url": "https://api.github.com/repos/flarum/mentions/zipball/026b261ccd65153c961c0c28d6c8c7f42e2a1ddf",
+                "reference": "026b261ccd65153c961c0c28d6c8c7f42e2a1ddf",
                 "shasum": ""
             },
             "require": {
@@ -1969,7 +1969,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2023-07-06T10:56:10+00:00"
+            "time": "2024-01-10T09:53:10+00:00"
         },
         {
             "name": "flarum/nicknames",
