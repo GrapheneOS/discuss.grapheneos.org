@@ -20,8 +20,9 @@ if [[ $mode == hourly ]]; then
     curl --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1.zip | gunzip > stopforumspam-listed_ip_1.txt.new
     mv stopforumspam-listed_ip_1.txt.new stopforumspam-listed_ip_1.txt
 
-    curl --fail-with-body https://check.torproject.org/torbulkexitlist | sort -u > torbulkexitlist.txt.new
-    mv torbulkexitlist.txt.new torbulkexitlist.txt
+    if curl --fail-with-body https://check.torproject.org/torbulkexitlist | sort -u > torbulkexitlist.txt.new; then
+        mv torbulkexitlist.txt.new torbulkexitlist.txt
+    fi
 
     sort -u stopforumspam-listed_ip_30.txt stopforumspam-listed_ip_1.txt | comm -1 -3 torbulkexitlist.txt - | awk '{ print $1 " 1;" }' > stopforumspam-listed_ip_merged.conf
 
