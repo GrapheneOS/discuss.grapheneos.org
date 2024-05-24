@@ -20,7 +20,7 @@ rsync -pcv --chmod=D755,F644 --fsync --preallocate my.cnf.d/server.cnf $remote:/
 rsync -rpcv --chmod=D755,F644 --fsync --preallocate php/{php.ini,php-fpm.d} $remote:/etc/php/
 rsync -rpcv --chmod=D755,F644 --fsync --preallocate php-legacy/{php.ini,php-fpm.d} $remote:/etc/php-legacy/
 rsync -pcv --chmod=755 --fsync --preallocate {flarum-asset-compress,flarum-deploy,remote-backup,stopforumspam-update} $remote:/usr/local/bin/
-rsync -pcv --chmod=644 --chown flarum-admin:flarum-admin --fsync --preallocate backup-public-key.txt cloud-archive-password.txt $remote:/home/flarum-admin/
+rsync -pcv --chmod=644 --chown flarum-admin:flarum-admin --fsync --preallocate backup-public-key.txt cloud-archive.sh $remote:/home/flarum-admin/
 rsync -pcv --chown root:geoipupdate --chmod=F640 --fsync --preallocate GeoIP.conf $remote:/etc/GeoIP.conf
 rsync -prcv --chmod=D755,F644 --fsync --preallocate systemd/system/ $remote:/etc/systemd/system
 ssh $remote nginx -s reload
