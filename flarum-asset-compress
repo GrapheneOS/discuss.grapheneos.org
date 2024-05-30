@@ -4,7 +4,7 @@ shopt -s extglob nullglob
 
 cd /opt/flarum/public/assets
 
-find -name '*.gz' -o -name '*.br' -delete
+find \( -name '*.gz' -o -name '*.br' \) -delete
 for f in *.*(css|js|js.map); do
     brotli $f -o $f.br.tmp
     mv $f.br.tmp $f.br
