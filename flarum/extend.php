@@ -27,5 +27,14 @@ return [
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <link rel="manifest" href="/manifest.webmanifest"/>
             ';
-        })
+        }),
+    (new Blomstra\Redis\Extend\Redis([
+        'scheme' => 'unix',
+        'path' => '/run/valkey/valkey.sock',
+        'port' => 0,
+        'database' => 1,
+    ]))
+        ->useDatabaseWith('cache', 1)
+        ->useDatabaseWith('queue', 2)
+        ->useDatabaseWith('session', 3)
 ];

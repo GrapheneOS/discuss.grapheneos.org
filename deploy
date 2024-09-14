@@ -18,6 +18,11 @@ remote=root@discuss.grapheneos.org
 rsync -rpcv --chmod=D755,F644 --delete --fsync --preallocate nginx/{nginx.conf,mime.types,snippets,blocked.conf} $remote:/etc/nginx/
 ssh $remote nginx -s reload
 
+rsync -pcv --chmod=F644 --fsync --preallocate valkey/valkey.conf $remote:/etc/valkey/valkey.conf
+ssh $remote usermod flarum -G valkey
+ssh $remote usermod flarum-admin -G valkey
+ssh $remote chmod 750 /var/lib/valkey
+
 rsync -pcv --chmod=D755,F644 --fsync --preallocate my.cnf.d/server.cnf $remote:/etc/my.cnf.d/server.cnf
 
 rsync -rpcv --chmod=D755,F644 --fsync --preallocate php/{php.ini,php-fpm.d} $remote:/etc/php/

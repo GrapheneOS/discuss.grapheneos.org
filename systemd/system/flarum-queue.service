@@ -1,0 +1,36 @@
+[Unit]
+Description=Flarum queue
+
+[Service]
+CapabilityBoundingSet=
+CPUSchedulingPolicy=batch
+ExecStart=/usr/bin/php flarum queue:work
+LockPersonality=true
+NoNewPrivileges=true
+PrivateDevices=true
+PrivateIPC=true
+PrivateTmp=true
+ProcSubset=pid
+ProtectClock=true
+ProtectControlGroups=true
+ProtectHome=true
+ProtectHostname=true
+ProtectKernelLogs=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+ProtectProc=invisible
+ProtectSystem=strict
+ReadWritePaths=/opt/flarum
+RemoveIPC=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+RestrictNamespaces=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~@privileged @obsolete
+User=flarum
+WorkingDirectory=/opt/flarum
+
+[Install]
+WantedBy=multi-user.target
