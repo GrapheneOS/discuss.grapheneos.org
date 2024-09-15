@@ -23,6 +23,7 @@ ProtectProc=invisible
 ProtectSystem=strict
 ReadWritePaths=/opt/flarum
 RemoveIPC=true
+Restart=always
 RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
 RestrictNamespaces=true
 RestrictRealtime=true
