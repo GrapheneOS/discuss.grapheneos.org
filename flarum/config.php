@@ -1,7 +1,6 @@
-<?php return array (
+<?php return [
   'debug' => false,
-  'database' =>
-  array (
+  'database' => [
     'driver' => 'mysql',
     'unix_socket' => '/run/mysqld/mysqld.sock',
     'database' => 'flarum',
@@ -12,16 +11,14 @@
     'strict' => false,
     'engine' => NULL,
     'prefix_indexes' => true,
-  ),
+  ],
   'url' => 'https://discuss.grapheneos.org',
-  'paths' =>
-  array (
+  'paths' => [
     'api' => 'api',
     'admin' => 'admin',
-  ),
-  'headers' =>
-  array (
+  ],
+  'headers' => [
     'poweredByHeader' => false,
     'referrerPolicy' => 'same-origin',
-  ),
-);
+  ],
+];
