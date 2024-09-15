@@ -1,5 +1,6 @@
 [Unit]
 Description=Flarum scheduler
+After=mariadb.service valkey.service
 
 [Service]
 CapabilityBoundingSet=

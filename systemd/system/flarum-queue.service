@@ -1,5 +1,6 @@
 [Unit]
 Description=Flarum queue
+After=mariadb.service valkey.service
 
 [Service]
 CapabilityBoundingSet=
