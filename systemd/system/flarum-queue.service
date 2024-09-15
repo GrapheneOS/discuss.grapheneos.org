@@ -5,7 +5,7 @@ After=mariadb.service valkey.service
 [Service]
 CapabilityBoundingSet=
 CPUSchedulingPolicy=batch
-ExecStart=/usr/bin/php flarum queue:work --sleep=1
+ExecStart=/usr/bin/php flarum queue:work --sleep=1 --tries=30 --backoff=30
 LockPersonality=true
 NoNewPrivileges=true
 PrivateDevices=true
