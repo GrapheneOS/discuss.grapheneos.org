@@ -9,7 +9,7 @@
     'collation' => 'utf8mb4_unicode_ci',
     'prefix' => '',
     'strict' => false,
-    'engine' => NULL,
+    'engine' => 'InnoDB',
     'prefix_indexes' => true,
   ],
   'url' => 'https://discuss.grapheneos.org',
