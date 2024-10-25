@@ -8,7 +8,7 @@ su flarum-admin -c "rsync -tv --fsync --preallocate flarum-staging/composer.{loc
 systemctl stop php-fpm
 su flarum-admin -c "rsync -tvr --delete --fsync --preallocate flarum-staging/vendor/ flarum/vendor"
 chown -R flarum:flarum flarum/public/assets
-su flarum -c "php flarum migrate; php flarum cache:clear; php flarum assets:publish"
+su flarum -c "cd flarum; php flarum migrate; php flarum cache:clear; php flarum assets:publish; php flarum cache:assets --css --js --locales"
 chown -R flarum-admin:flarum-admin flarum/public/assets
 chown -R flarum:flarum flarum/public/assets/avatars
 systemctl start php-fpm

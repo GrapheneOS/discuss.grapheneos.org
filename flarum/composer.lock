@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bc43b9d94ec4af84396c1ea90163e633",
+    "content-hash": "2e697ef9c53501fa2a90f74ec40efde1",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -58,6 +58,67 @@
                 "source": "https://github.com/axypro/backtrace/tree/2.0.0"
             },
             "time": "2019-02-02T18:01:31+00:00"
+        },
+        {
+            "name": "blomstra/cache-assets",
+            "version": "0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/blomstra/flarum-ext-cache-assets.git",
+                "reference": "ac97ae9288629b111bff80eee484e7cc8b5445e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/blomstra/flarum-ext-cache-assets/zipball/ac97ae9288629b111bff80eee484e7cc8b5445e2",
+                "reference": "ac97ae9288629b111bff80eee484e7cc8b5445e2",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-extension": {
+                    "title": "Cache Assets",
+                    "category": "other",
+                    "icon": {
+                        "name": "fas fa-box-open",
+                        "backgroundColor": "#EBF1FD",
+                        "color": "#3a98d0"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Blomstra\\CacheAssets\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniël Klabbers",
+                    "email": "daniel@klabbers.email",
+                    "homepage": "http://luceos.com"
+                }
+            ],
+            "description": "Allows caching js and css ahead of any browser request.",
+            "keywords": [
+                "JS",
+                "assets",
+                "blomstra",
+                "cache",
+                "css",
+                "extension",
+                "flarum"
+            ],
+            "support": {
+                "issues": "https://github.com/blomstra/flarum-ext-cache-assets/issues",
+                "source": "https://github.com/blomstra/flarum-ext-cache-assets/tree/0.5"
+            },
+            "time": "2021-06-04T12:10:26+00:00"
         },
         {
             "name": "blomstra/flarum-redis",

@@ -21,6 +21,7 @@
         "docs": "https://docs.flarum.org/"
     },
     "require": {
+        "blomstra/cache-assets": "*",
         "blomstra/flarum-redis": "*",
         "flarum/approval": "*",
         "flarum/bbcode": "*",
