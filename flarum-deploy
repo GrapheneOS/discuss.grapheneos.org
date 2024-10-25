@@ -9,7 +9,6 @@ systemctl stop php-fpm
 su flarum-admin -c "rsync -tvr --delete --fsync --preallocate flarum-staging/vendor/ flarum/vendor"
 chown -R flarum:flarum flarum/public/assets
 su flarum -c "php flarum migrate; php flarum cache:clear; php flarum assets:publish"
-sed -i 's|"/register"|"/register-no-bots"|' flarum/public/assets/forum.js
 chown -R flarum-admin:flarum-admin flarum/public/assets
 chown -R flarum:flarum flarum/public/assets/avatars
 systemctl start php-fpm
