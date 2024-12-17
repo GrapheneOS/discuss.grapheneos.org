@@ -318,12 +318,12 @@
             "type": "component",
             "extra": {
                 "component": {
-                    "styles": [
-                        "css/all.css"
-                    ],
                     "files": [
                         "css/all.min.css",
                         "webfonts/*"
+                    ],
+                    "styles": [
+                        "css/all.css"
                     ]
                 }
             },
@@ -681,29 +681,27 @@
         },
         {
             "name": "doctrine/deprecations",
-            "version": "1.1.3",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/deprecations.git",
-                "reference": "dfbaa3c2d2e9a9df1118213f3b8b0c597bb99fab"
+                "reference": "31610dbb31faa98e6b5447b62340826f54fbc4e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/dfbaa3c2d2e9a9df1118213f3b8b0c597bb99fab",
-                "reference": "dfbaa3c2d2e9a9df1118213f3b8b0c597bb99fab",
+                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/31610dbb31faa98e6b5447b62340826f54fbc4e9",
+                "reference": "31610dbb31faa98e6b5447b62340826f54fbc4e9",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1 || ^8.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^9",
-                "phpstan/phpstan": "1.4.10 || 1.10.15",
-                "phpstan/phpstan-phpunit": "^1.0",
+                "doctrine/coding-standard": "^9 || ^12",
+                "phpstan/phpstan": "1.4.10 || 2.0.3",
+                "phpstan/phpstan-phpunit": "^1.0 || ^2",
                 "phpunit/phpunit": "^7.5 || ^8.5 || ^9.5",
-                "psalm/plugin-phpunit": "0.18.4",
-                "psr/log": "^1 || ^2 || ^3",
-                "vimeo/psalm": "4.30.0 || 5.12.0"
+                "psr/log": "^1 || ^2 || ^3"
             },
             "suggest": {
                 "psr/log": "Allows logging deprecations via PSR-3 logger implementation"
@@ -711,7 +709,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Doctrine\\Deprecations\\": "lib/Doctrine/Deprecations"
+                    "Doctrine\\Deprecations\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -722,9 +720,9 @@
             "homepage": "https://www.doctrine-project.org/",
             "support": {
                 "issues": "https://github.com/doctrine/deprecations/issues",
-                "source": "https://github.com/doctrine/deprecations/tree/1.1.3"
+                "source": "https://github.com/doctrine/deprecations/tree/1.1.4"
             },
-            "time": "2024-01-30T19:34:25+00:00"
+            "time": "2024-12-07T21:18:45+00:00"
         },
         {
             "name": "doctrine/event-manager",
@@ -1268,34 +1266,34 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Approval",
-                    "category": "feature",
                     "icon": {
                         "name": "fas fa-check",
-                        "backgroundColor": "#ABDC88",
-                        "color": "#3F8A32"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": true,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": true,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "color": "#3F8A32",
+                        "backgroundColor": "#ABDC88"
+                    },
+                    "title": "Approval",
+                    "category": "feature"
                 }
             },
             "autoload": {
@@ -1344,34 +1342,34 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": false,
+                        "css": false,
+                        "admin": false,
+                        "forum": false,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": false,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": false,
+                        "backendTesting": false
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "BBCode",
-                    "category": "feature",
                     "icon": {
                         "name": "fas fa-bold",
-                        "backgroundColor": "#238C59",
-                        "color": "#fff"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": false,
-                        "forum": false,
-                        "js": false,
-                        "jsCommon": false,
-                        "css": false,
-                        "gitConf": true,
-                        "githubActions": false,
-                        "prettier": false,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": false,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "color": "#fff",
+                        "backgroundColor": "#238C59"
+                    },
+                    "title": "BBCode",
+                    "category": "feature"
                 }
             },
             "autoload": {
@@ -1403,16 +1401,16 @@
         },
         {
             "name": "flarum/core",
-            "version": "v1.8.8",
+            "version": "v1.8.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/flarum-core.git",
-                "reference": "95dd4420f8254f9de04d7e0fecdd1d06686ede6b"
+                "reference": "c09efebdcfb4cdc396bee0efafa0a81946fc813f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/95dd4420f8254f9de04d7e0fecdd1d06686ede6b",
-                "reference": "95dd4420f8254f9de04d7e0fecdd1d06686ede6b",
+                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/c09efebdcfb4cdc396bee0efafa0a81946fc813f",
+                "reference": "c09efebdcfb4cdc396bee0efafa0a81946fc813f",
                 "shasum": ""
             },
             "require": {
@@ -1440,9 +1438,9 @@
                 "illuminate/view": "^8.0",
                 "intervention/image": "2.5.* || ^2.6.1",
                 "jenssegers/agent": "^2.6",
-                "laminas/laminas-diactoros": "^2.4.1",
-                "laminas/laminas-httphandlerrunner": "^1.2.0 || ^2.3.0",
-                "laminas/laminas-stratigility": "^3.2.2",
+                "laminas/laminas-diactoros": "^2.4.1 || ^3.0.0",
+                "laminas/laminas-httphandlerrunner": "^1.2.0 || ^2.3.0 || ^3.0.0",
+                "laminas/laminas-stratigility": "^3.2.2 || ^4.0.0",
                 "league/flysystem": "^1.0.11",
                 "matthiasmullie/minify": "^1.3",
                 "middlewares/base-path": "^2.0.1",
@@ -1473,30 +1471,30 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "1.x-dev"
-                },
                 "flarum-cli": {
-                    "excludeScaffolding": [
-                        "LICENSE.md",
-                        "js/tsconfig.json",
-                        "js/webpack.config.js"
-                    ],
                     "modules": {
-                        "backendTesting": true,
                         "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
                         "gitConf": true,
-                        "githubActions": true,
+                        "styleci": true,
+                        "jsCommon": true,
                         "prettier": true,
                         "typescript": true,
                         "bundlewatch": true,
                         "editorConfig": true,
-                        "styleci": true,
-                        "admin": true,
-                        "forum": true,
-                        "jsCommon": true,
-                        "css": true
-                    }
+                        "githubActions": true,
+                        "backendTesting": true
+                    },
+                    "excludeScaffolding": [
+                        "LICENSE.md",
+                        "js/tsconfig.json",
+                        "js/webpack.config.js"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
                 }
             },
             "autoload": {
@@ -1545,7 +1543,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2024-10-22T09:18:09+00:00"
+            "time": "2024-11-20T13:51:54+00:00"
         },
         {
             "name": "flarum/emoji",
@@ -1566,33 +1564,33 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": false,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": false
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Emoji",
-                    "category": "feature",
                     "icon": {
                         "image": "icon.svg",
                         "backgroundColor": "#FECC4D"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": false,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": false,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                    },
+                    "title": "Emoji",
+                    "category": "feature"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1619,16 +1617,16 @@
         },
         {
             "name": "flarum/flags",
-            "version": "v1.8.1",
+            "version": "v1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/flags.git",
-                "reference": "6a21c1a556ebbcdb0905ba8908147a2b2794a284"
+                "reference": "ba857db6f0e8c8b55cbab1ca0b7bc30215e92447"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/flags/zipball/6a21c1a556ebbcdb0905ba8908147a2b2794a284",
-                "reference": "6a21c1a556ebbcdb0905ba8908147a2b2794a284",
+                "url": "https://api.github.com/repos/flarum/flags/zipball/ba857db6f0e8c8b55cbab1ca0b7bc30215e92447",
+                "reference": "ba857db6f0e8c8b55cbab1ca0b7bc30215e92447",
                 "shasum": ""
             },
             "require": {
@@ -1641,34 +1639,34 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": true,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Flags",
-                    "category": "feature",
                     "icon": {
                         "name": "fas fa-flag",
-                        "backgroundColor": "#D659B5",
-                        "color": "#fff"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": true,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": true,
-                        "bundlewatch": false,
-                        "backendTesting": true,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "color": "#fff",
+                        "backgroundColor": "#D659B5"
+                    },
+                    "title": "Flags",
+                    "category": "feature"
                 }
             },
             "autoload": {
@@ -1696,7 +1694,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2024-10-08T06:40:35+00:00"
+            "time": "2024-10-26T22:18:59+00:00"
         },
         {
             "name": "flarum/gdpr",
@@ -1727,25 +1725,25 @@
             },
             "type": "flarum-extension",
             "extra": {
-                "flarum-extension": {
-                    "title": "GDPR Data Management",
-                    "category": "feature",
-                    "icon": {
-                        "image": "resources/logo.svg",
-                        "backgroundColor": "#EBF1FD",
-                        "color": "#3a98d0",
-                        "backgroundSize": "90%",
-                        "backgroundRepeat": "no-repeat",
-                        "backgroundPosition": "center"
-                    }
-                },
                 "flarum-cli": {
                     "modules": {
-                        "githubActions": true,
+                        "jsCommon": true,
                         "typescript": true,
-                        "backendTesting": true,
-                        "jsCommon": true
+                        "githubActions": true,
+                        "backendTesting": true
                     }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "color": "#3a98d0",
+                        "image": "resources/logo.svg",
+                        "backgroundSize": "90%",
+                        "backgroundColor": "#EBF1FD",
+                        "backgroundRepeat": "no-repeat",
+                        "backgroundPosition": "center"
+                    },
+                    "title": "GDPR Data Management",
+                    "category": "feature"
                 }
             },
             "autoload": {
@@ -1822,44 +1820,44 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": false,
+                        "css": false,
+                        "admin": false,
+                        "forum": false,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": false,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": false,
+                        "backendTesting": false
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
-                },
-                "flarum-extension": {
-                    "title": "English",
-                    "category": "language",
-                    "info": {
-                        "donate": "https://flarum.org/donate/",
-                        "website": "https://flarum.org",
-                        "support": "https://discuss.flarum.org"
-                    },
-                    "icon": {
-                        "image": "icon.svg",
-                        "backgroundColor": "#00247d",
-                        "backgroundSize": "cover",
-                        "backgroundPosition": "center"
-                    }
                 },
                 "flarum-locale": {
                     "code": "en",
                     "title": "English"
                 },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": false,
-                        "forum": false,
-                        "js": false,
-                        "jsCommon": false,
-                        "css": false,
-                        "gitConf": true,
-                        "githubActions": false,
-                        "prettier": false,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": false,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                "flarum-extension": {
+                    "icon": {
+                        "image": "icon.svg",
+                        "backgroundSize": "cover",
+                        "backgroundColor": "#00247d",
+                        "backgroundPosition": "center"
+                    },
+                    "info": {
+                        "donate": "https://flarum.org/donate/",
+                        "support": "https://discuss.flarum.org",
+                        "website": "https://flarum.org"
+                    },
+                    "title": "English",
+                    "category": "language"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1907,34 +1905,34 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Likes",
-                    "category": "feature",
                     "icon": {
                         "name": "far fa-thumbs-up",
-                        "backgroundColor": "#3A649D",
-                        "color": "#fff"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": true,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": true,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "color": "#fff",
+                        "backgroundColor": "#3A649D"
+                    },
+                    "title": "Likes",
+                    "category": "feature"
                 }
             },
             "autoload": {
@@ -1966,16 +1964,16 @@
         },
         {
             "name": "flarum/lock",
-            "version": "v1.8.1",
+            "version": "v1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/lock.git",
-                "reference": "7e300b0db1fc6e13a7ed512964cdd3ae5b3e0d2e"
+                "reference": "f526df48dfa7b87aee0ca0b245000a3f3960cece"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/lock/zipball/7e300b0db1fc6e13a7ed512964cdd3ae5b3e0d2e",
-                "reference": "7e300b0db1fc6e13a7ed512964cdd3ae5b3e0d2e",
+                "url": "https://api.github.com/repos/flarum/lock/zipball/f526df48dfa7b87aee0ca0b245000a3f3960cece",
+                "reference": "f526df48dfa7b87aee0ca0b245000a3f3960cece",
                 "shasum": ""
             },
             "require": {
@@ -1983,34 +1981,34 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": false
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Lock",
-                    "category": "feature",
                     "icon": {
                         "name": "fas fa-lock",
-                        "backgroundColor": "#ddd",
-                        "color": "#666"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": true,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": false,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "color": "#666",
+                        "backgroundColor": "#ddd"
+                    },
+                    "title": "Lock",
+                    "category": "feature"
                 }
             },
             "autoload": {
@@ -2038,7 +2036,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2024-10-02T11:13:26+00:00"
+            "time": "2024-10-26T22:15:50+00:00"
         },
         {
             "name": "flarum/markdown",
@@ -2059,37 +2057,37 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": false,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": false
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Markdown",
-                    "category": "feature",
                     "icon": {
+                        "color": "#fff",
                         "image": "icon.svg",
-                        "backgroundColor": "#000",
                         "backgroundSize": "100%",
+                        "backgroundColor": "#000",
                         "backgroundRepeat": "no-repeat",
-                        "backgroundPosition": "center",
-                        "color": "#fff"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": false,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": false,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "backgroundPosition": "center"
+                    },
+                    "title": "Markdown",
+                    "category": "feature"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2116,16 +2114,16 @@
         },
         {
             "name": "flarum/mentions",
-            "version": "v1.8.4",
+            "version": "v1.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/mentions.git",
-                "reference": "9f1d786e35c27a1c52bff1d5c8f7ee929921653d"
+                "reference": "cda26a4fbfa39b646c6d63394b281b004ddf69b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/mentions/zipball/9f1d786e35c27a1c52bff1d5c8f7ee929921653d",
-                "reference": "9f1d786e35c27a1c52bff1d5c8f7ee929921653d",
+                "url": "https://api.github.com/repos/flarum/mentions/zipball/cda26a4fbfa39b646c6d63394b281b004ddf69b6",
+                "reference": "cda26a4fbfa39b646c6d63394b281b004ddf69b6",
                 "shasum": ""
             },
             "require": {
@@ -2138,37 +2136,37 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-at",
+                        "color": "#fff",
+                        "backgroundColor": "#539EC1"
+                    },
                     "title": "Mentions",
                     "category": "feature",
                     "optional-dependencies": [
                         "flarum/tags"
-                    ],
-                    "icon": {
-                        "name": "fas fa-at",
-                        "backgroundColor": "#539EC1",
-                        "color": "#fff"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": true,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": true,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                    ]
                 }
             },
             "autoload": {
@@ -2196,20 +2194,20 @@
                     "type": "website"
                 }
             ],
-            "time": "2024-10-08T05:56:09+00:00"
+            "time": "2024-11-06T14:59:27+00:00"
         },
         {
             "name": "flarum/nicknames",
-            "version": "v1.8.1",
+            "version": "v1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/nicknames.git",
-                "reference": "64e7e0e7c25628f08f02f641d9e929d8ab4f7a8c"
+                "reference": "ab4ab706ea778f26fb923b31a3f3a2f76c5ecbc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/nicknames/zipball/64e7e0e7c25628f08f02f641d9e929d8ab4f7a8c",
-                "reference": "64e7e0e7c25628f08f02f641d9e929d8ab4f7a8c",
+                "url": "https://api.github.com/repos/flarum/nicknames/zipball/ab4ab706ea778f26fb923b31a3f3a2f76c5ecbc6",
+                "reference": "ab4ab706ea778f26fb923b31a3f3a2f76c5ecbc6",
                 "shasum": ""
             },
             "require": {
@@ -2221,34 +2219,34 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": false,
+                        "admin": true,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Nicknames",
-                    "category": "feature",
                     "icon": {
                         "name": "fas fa-user-tag",
-                        "backgroundColor": "#8E4529",
-                        "color": "#ffffff"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": true,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": false,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": true,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "color": "#ffffff",
+                        "backgroundColor": "#8E4529"
+                    },
+                    "title": "Nicknames",
+                    "category": "feature"
                 }
             },
             "autoload": {
@@ -2276,7 +2274,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2024-10-02T11:13:26+00:00"
+            "time": "2024-10-26T22:15:50+00:00"
         },
         {
             "name": "flarum/pusher",
@@ -2301,37 +2299,37 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": true,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": false
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Pusher",
-                    "category": "feature",
                     "icon": {
+                        "color": "#fff",
                         "image": "icon.png",
                         "backgroundSize": "46% 63%",
-                        "backgroundPosition": "center",
-                        "backgroundRepeat": "no-repeat",
                         "backgroundColor": "#40bad8",
-                        "color": "#fff"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": true,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": true,
-                        "bundlewatch": false,
-                        "backendTesting": false,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "backgroundRepeat": "no-repeat",
+                        "backgroundPosition": "center"
+                    },
+                    "title": "Pusher",
+                    "category": "feature"
                 }
             },
             "autoload": {
@@ -2383,37 +2381,37 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": false,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": true,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    },
+                    "excludeScaffolding": [
+                        "js/src/admin/index.ts"
+                    ]
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Statistics",
-                    "category": "feature",
                     "icon": {
                         "name": "fas fa-chart-bar",
-                        "backgroundColor": "#6932d1",
-                        "color": "#fff"
-                    }
-                },
-                "flarum-cli": {
-                    "excludeScaffolding": [
-                        "js/src/admin/index.ts"
-                    ],
-                    "modules": {
-                        "admin": true,
-                        "forum": false,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": true,
-                        "bundlewatch": false,
-                        "backendTesting": true,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "color": "#fff",
+                        "backgroundColor": "#6932d1"
+                    },
+                    "title": "Statistics",
+                    "category": "feature"
                 }
             },
             "autoload": {
@@ -2445,16 +2443,16 @@
         },
         {
             "name": "flarum/sticky",
-            "version": "v1.8.1",
+            "version": "v1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/sticky.git",
-                "reference": "0268d801eaa846845f4bd870c343c7a081fa6a04"
+                "reference": "a020d8d4619ce788990cf0c94f56424184048caa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/sticky/zipball/0268d801eaa846845f4bd870c343c7a081fa6a04",
-                "reference": "0268d801eaa846845f4bd870c343c7a081fa6a04",
+                "url": "https://api.github.com/repos/flarum/sticky/zipball/a020d8d4619ce788990cf0c94f56424184048caa",
+                "reference": "a020d8d4619ce788990cf0c94f56424184048caa",
                 "shasum": ""
             },
             "require": {
@@ -2466,34 +2464,34 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Sticky",
-                    "category": "feature",
                     "icon": {
                         "name": "fas fa-thumbtack",
-                        "backgroundColor": "#D13E32",
-                        "color": "#fff"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": true,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": true,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "color": "#fff",
+                        "backgroundColor": "#D13E32"
+                    },
+                    "title": "Sticky",
+                    "category": "feature"
                 }
             },
             "autoload": {
@@ -2521,7 +2519,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2024-10-02T11:13:26+00:00"
+            "time": "2024-10-26T22:15:50+00:00"
         },
         {
             "name": "flarum/subscriptions",
@@ -2546,37 +2544,37 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": false,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-star",
+                        "color": "#de8e00",
+                        "backgroundColor": "#ffea7b"
+                    },
                     "title": "Subscriptions",
                     "category": "feature",
                     "optional-dependencies": [
                         "flarum/approval"
-                    ],
-                    "icon": {
-                        "name": "fas fa-star",
-                        "backgroundColor": "#ffea7b",
-                        "color": "#de8e00"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": false,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": true,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                    ]
                 }
             },
             "autoload": {
@@ -2608,16 +2606,16 @@
         },
         {
             "name": "flarum/suspend",
-            "version": "v1.8.3",
+            "version": "v1.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/suspend.git",
-                "reference": "c91a1ca1fcaf898fe213a6b11cb37af7f9f89e48"
+                "reference": "8c62430d238f650eeb54323c204b335d9c39f771"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/suspend/zipball/c91a1ca1fcaf898fe213a6b11cb37af7f9f89e48",
-                "reference": "c91a1ca1fcaf898fe213a6b11cb37af7f9f89e48",
+                "url": "https://api.github.com/repos/flarum/suspend/zipball/8c62430d238f650eeb54323c204b335d9c39f771",
+                "reference": "8c62430d238f650eeb54323c204b335d9c39f771",
                 "shasum": ""
             },
             "require": {
@@ -2628,34 +2626,34 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Suspend",
-                    "category": "feature",
                     "icon": {
                         "name": "fas fa-ban",
-                        "backgroundColor": "#ddd",
-                        "color": "#666"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": true,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": false,
-                        "bundlewatch": false,
-                        "backendTesting": true,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "color": "#666",
+                        "backgroundColor": "#ddd"
+                    },
+                    "title": "Suspend",
+                    "category": "feature"
                 }
             },
             "autoload": {
@@ -2683,20 +2681,20 @@
                     "type": "website"
                 }
             ],
-            "time": "2024-10-15T11:10:55+00:00"
+            "time": "2024-11-20T08:51:17+00:00"
         },
         {
             "name": "flarum/tags",
-            "version": "v1.8.2",
+            "version": "v1.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/tags.git",
-                "reference": "07fd62978dd8df4d0d1417d53c3a4088fae863a1"
+                "reference": "1baea940d1504da46805e64575ae336e5da6b43c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/tags/zipball/07fd62978dd8df4d0d1417d53c3a4088fae863a1",
-                "reference": "07fd62978dd8df4d0d1417d53c3a4088fae863a1",
+                "url": "https://api.github.com/repos/flarum/tags/zipball/1baea940d1504da46805e64575ae336e5da6b43c",
+                "reference": "1baea940d1504da46805e64575ae336e5da6b43c",
                 "shasum": ""
             },
             "require": {
@@ -2708,34 +2706,34 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": true,
+                        "prettier": false,
+                        "typescript": true,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
                 "branch-alias": {
                     "dev-main": "1.x-dev"
                 },
                 "flarum-extension": {
-                    "title": "Tags",
-                    "category": "feature",
                     "icon": {
                         "name": "fas fa-tags",
-                        "backgroundColor": "#F28326",
-                        "color": "#fff"
-                    }
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": true,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": true,
-                        "css": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": false,
-                        "typescript": true,
-                        "bundlewatch": false,
-                        "backendTesting": true,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
+                        "color": "#fff",
+                        "backgroundColor": "#F28326"
+                    },
+                    "title": "Tags",
+                    "category": "feature"
                 }
             },
             "autoload": {
@@ -2763,7 +2761,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2024-10-02T07:10:53+00:00"
+            "time": "2024-11-20T08:51:17+00:00"
         },
         {
             "name": "fof/anti-spam",
@@ -2798,38 +2796,38 @@
             },
             "type": "flarum-extension",
             "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "locale": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": true,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
                 "flarum-extension": {
-                    "title": "FoF Anti Spam",
-                    "category": "feature",
                     "icon": {
                         "name": "fas fa-shield-alt",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#fff"
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
                     },
+                    "title": "FoF Anti Spam",
+                    "category": "feature",
                     "optional-dependencies": [
                         "flarum/suspend",
                         "flarum/flags",
                         "flarum/approval",
                         "flarum/tags"
                     ]
-                },
-                "flarum-cli": {
-                    "modules": {
-                        "admin": true,
-                        "forum": true,
-                        "js": true,
-                        "jsCommon": false,
-                        "css": true,
-                        "locale": true,
-                        "gitConf": true,
-                        "githubActions": true,
-                        "prettier": true,
-                        "typescript": true,
-                        "bundlewatch": false,
-                        "backendTesting": true,
-                        "editorConfig": true,
-                        "styleci": true
-                    }
                 }
             },
             "autoload": {
@@ -2892,15 +2890,6 @@
             },
             "type": "flarum-extension",
             "extra": {
-                "flarum-extension": {
-                    "title": "FoF Filter",
-                    "category": "feature",
-                    "icon": {
-                        "name": "fas fa-filter",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#fff"
-                    }
-                },
                 "flagrow": {
                     "discuss": "https://discuss.flarum.org/d/5131"
                 },
@@ -2909,6 +2898,15 @@
                         "githubActions": true,
                         "backendTesting": true
                     }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-filter",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Filter",
+                    "category": "feature"
                 }
             },
             "autoload": {
@@ -3254,27 +3252,27 @@
             },
             "type": "flarum-extension",
             "extra": {
-                "flarum-extension": {
-                    "title": "FoF User Bio",
-                    "category": "feature",
-                    "icon": {
-                        "name": "fas fa-pen",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#fff"
-                    },
-                    "optional-dependencies": [
-                        "flarum/suspend",
-                        "flarum/gdpr"
-                    ]
-                },
                 "flagrow": {
                     "discuss": "https://discuss.flarum.org/d/17775"
                 },
                 "flarum-cli": {
                     "modules": {
-                        "backendTesting": true,
-                        "githubActions": true
+                        "githubActions": true,
+                        "backendTesting": true
                     }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-pen",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF User Bio",
+                    "category": "feature",
+                    "optional-dependencies": [
+                        "flarum/suspend",
+                        "flarum/gdpr"
+                    ]
                 }
             },
             "autoload": {
@@ -4889,16 +4887,16 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "2.4-dev"
-                },
                 "laravel": {
-                    "providers": [
-                        "Intervention\\Image\\ImageServiceProvider"
-                    ],
                     "aliases": {
                         "Image": "Intervention\\Image\\Facades\\Image"
-                    }
+                    },
+                    "providers": [
+                        "Intervention\\Image\\ImageServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -4945,20 +4943,20 @@
         },
         {
             "name": "jaybizzle/crawler-detect",
-            "version": "v1.2.121",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JayBizzle/Crawler-Detect.git",
-                "reference": "40ecda6322d4163fe2c6e1dd47c574f580b8487f"
+                "reference": "be155e11613fa618aa18aee438955588d1092a47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/40ecda6322d4163fe2c6e1dd47c574f580b8487f",
-                "reference": "40ecda6322d4163fe2c6e1dd47c574f580b8487f",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/be155e11613fa618aa18aee438955588d1092a47",
+                "reference": "be155e11613fa618aa18aee438955588d1092a47",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
+                "php": ">=7.1.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^4.8|^5.5|^6.5|^9.4"
@@ -4991,9 +4989,9 @@
             ],
             "support": {
                 "issues": "https://github.com/JayBizzle/Crawler-Detect/issues",
-                "source": "https://github.com/JayBizzle/Crawler-Detect/tree/v1.2.121"
+                "source": "https://github.com/JayBizzle/Crawler-Detect/tree/v1.3.0"
             },
-            "time": "2024-10-20T21:42:39+00:00"
+            "time": "2024-11-25T19:38:36+00:00"
         },
         {
             "name": "jenssegers/agent",
@@ -5080,41 +5078,41 @@
         },
         {
             "name": "laminas/laminas-diactoros",
-            "version": "2.26.0",
+            "version": "3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-diactoros.git",
-                "reference": "6584d44eb8e477e89d453313b858daac6183cddc"
+                "reference": "143a16306602ce56b8b092a7914fef03c37f9ed2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-diactoros/zipball/6584d44eb8e477e89d453313b858daac6183cddc",
-                "reference": "6584d44eb8e477e89d453313b858daac6183cddc",
+                "url": "https://api.github.com/repos/laminas/laminas-diactoros/zipball/143a16306602ce56b8b092a7914fef03c37f9ed2",
+                "reference": "143a16306602ce56b8b092a7914fef03c37f9ed2",
                 "shasum": ""
             },
             "require": {
-                "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0",
-                "psr/http-factory": "^1.0",
-                "psr/http-message": "^1.1"
+                "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
+                "psr/http-factory": "^1.1",
+                "psr/http-message": "^1.1 || ^2.0"
             },
             "conflict": {
-                "zendframework/zend-diactoros": "*"
+                "amphp/amp": "<2.6.4"
             },
             "provide": {
-                "psr/http-factory-implementation": "1.0",
-                "psr/http-message-implementation": "1.0"
+                "psr/http-factory-implementation": "^1.0",
+                "psr/http-message-implementation": "^1.1 || ^2.0"
             },
             "require-dev": {
                 "ext-curl": "*",
                 "ext-dom": "*",
                 "ext-gd": "*",
                 "ext-libxml": "*",
-                "http-interop/http-factory-tests": "^0.9.0",
-                "laminas/laminas-coding-standard": "^2.5",
-                "php-http/psr7-integration-tests": "^1.2",
-                "phpunit/phpunit": "^9.5.28",
-                "psalm/plugin-phpunit": "^0.18.4",
-                "vimeo/psalm": "^5.6"
+                "http-interop/http-factory-tests": "^2.2.0",
+                "laminas/laminas-coding-standard": "~2.5.0",
+                "php-http/psr7-integration-tests": "^1.4.0",
+                "phpunit/phpunit": "^10.5.36",
+                "psalm/plugin-phpunit": "^0.19.0",
+                "vimeo/psalm": "^5.26.1"
             },
             "type": "library",
             "extra": {
@@ -5129,18 +5127,9 @@
                     "src/functions/marshal_headers_from_sapi.php",
                     "src/functions/marshal_method_from_sapi.php",
                     "src/functions/marshal_protocol_version_from_sapi.php",
-                    "src/functions/marshal_uri_from_sapi.php",
                     "src/functions/normalize_server.php",
                     "src/functions/normalize_uploaded_files.php",
-                    "src/functions/parse_cookie_header.php",
-                    "src/functions/create_uploaded_file.legacy.php",
-                    "src/functions/marshal_headers_from_sapi.legacy.php",
-                    "src/functions/marshal_method_from_sapi.legacy.php",
-                    "src/functions/marshal_protocol_version_from_sapi.legacy.php",
-                    "src/functions/marshal_uri_from_sapi.legacy.php",
-                    "src/functions/normalize_server.legacy.php",
-                    "src/functions/normalize_uploaded_files.legacy.php",
-                    "src/functions/parse_cookie_header.legacy.php"
+                    "src/functions/parse_cookie_header.php"
                 ],
                 "psr-4": {
                     "Laminas\\Diactoros\\": "src/"
@@ -5173,20 +5162,20 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2023-10-29T16:17:44+00:00"
+            "time": "2024-10-14T11:59:49+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
-            "version": "2.14.0",
+            "version": "2.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-escaper.git",
-                "reference": "0f7cb975f4443cf22f33408925c231225cfba8cb"
+                "reference": "c612b0488ae486284c39885efca494c180f16351"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-escaper/zipball/0f7cb975f4443cf22f33408925c231225cfba8cb",
-                "reference": "0f7cb975f4443cf22f33408925c231225cfba8cb",
+                "url": "https://api.github.com/repos/laminas/laminas-escaper/zipball/c612b0488ae486284c39885efca494c180f16351",
+                "reference": "c612b0488ae486284c39885efca494c180f16351",
                 "shasum": ""
             },
             "require": {
@@ -5198,12 +5187,12 @@
                 "zendframework/zend-escaper": "*"
             },
             "require-dev": {
-                "infection/infection": "^0.27.9",
-                "laminas/laminas-coding-standard": "~3.0.0",
+                "infection/infection": "^0.27.11",
+                "laminas/laminas-coding-standard": "~3.0.1",
                 "maglnet/composer-require-checker": "^3.8.0",
-                "phpunit/phpunit": "^9.6.16",
+                "phpunit/phpunit": "^9.6.22",
                 "psalm/plugin-phpunit": "^0.19.0",
-                "vimeo/psalm": "^5.21.1"
+                "vimeo/psalm": "^5.26.1"
             },
             "type": "library",
             "autoload": {
@@ -5235,7 +5224,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2024-10-24T10:12:53+00:00"
+            "time": "2024-12-17T19:39:54+00:00"
         },
         {
             "name": "laminas/laminas-httphandlerrunner",
@@ -5306,22 +5295,23 @@
         },
         {
             "name": "laminas/laminas-stratigility",
-            "version": "3.13.0",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-stratigility.git",
-                "reference": "3df57528b5c8e9d958515c51006825a83f76d62b"
+                "reference": "79f9302a19ef33d114d85656347b0880933cc210"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-stratigility/zipball/3df57528b5c8e9d958515c51006825a83f76d62b",
-                "reference": "3df57528b5c8e9d958515c51006825a83f76d62b",
+                "url": "https://api.github.com/repos/laminas/laminas-stratigility/zipball/79f9302a19ef33d114d85656347b0880933cc210",
+                "reference": "79f9302a19ef33d114d85656347b0880933cc210",
                 "shasum": ""
             },
             "require": {
                 "fig/http-message-util": "^1.1",
                 "laminas/laminas-escaper": "^2.10.0",
                 "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
+                "psr/http-factory": "^1.0.2",
                 "psr/http-message": "^1.0 || ^2.0",
                 "psr/http-server-middleware": "^1.0.2"
             },
@@ -5329,14 +5319,15 @@
                 "zendframework/zend-stratigility": "*"
             },
             "require-dev": {
-                "laminas/laminas-coding-standard": "~2.5.0",
+                "laminas/laminas-coding-standard": "~3.0.0",
                 "laminas/laminas-diactoros": "^2.25 || ^3.5.0",
                 "phpunit/phpunit": "^10.5.37",
                 "psalm/plugin-phpunit": "^0.19.0",
                 "vimeo/psalm": "^5.26.1"
             },
             "suggest": {
-                "psr/http-message-implementation": "Please install a psr/http-message-implementation to consume Stratigility; e.g., laminas/laminas-diactoros"
+                "psr/http-factory-implementation": "Please install a psr/http-factory implementation to consume Stratigility; e.g., laminas/laminas-diactoros",
+                "psr/http-message-implementation": "Please install a psr/http-message implementation to consume Stratigility; e.g., laminas/laminas-diactoros"
             },
             "type": "library",
             "autoload": {
@@ -5344,11 +5335,7 @@
                     "src/functions/double-pass-middleware.php",
                     "src/functions/host.php",
                     "src/functions/middleware.php",
-                    "src/functions/path.php",
-                    "src/functions/double-pass-middleware.legacy.php",
-                    "src/functions/host.legacy.php",
-                    "src/functions/middleware.legacy.php",
-                    "src/functions/path.legacy.php"
+                    "src/functions/path.php"
                 ],
                 "psr-4": {
                     "Laminas\\Stratigility\\": "src/"
@@ -5365,6 +5352,7 @@
                 "laminas",
                 "middleware",
                 "psr-15",
+                "psr-17",
                 "psr-7"
             ],
             "support": {
@@ -5381,7 +5369,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2024-10-28T11:28:41+00:00"
+            "time": "2024-10-28T11:43:51+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -5446,16 +5434,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "2.5.3",
+            "version": "2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "b650144166dfa7703e62a22e493b853b58d874b0"
+                "reference": "d150f911e0079e90ae3c106734c93137c184f932"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/b650144166dfa7703e62a22e493b853b58d874b0",
-                "reference": "b650144166dfa7703e62a22e493b853b58d874b0",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/d150f911e0079e90ae3c106734c93137c184f932",
+                "reference": "d150f911e0079e90ae3c106734c93137c184f932",
                 "shasum": ""
             },
             "require": {
@@ -5480,8 +5468,9 @@
                 "phpstan/phpstan": "^1.8.2",
                 "phpunit/phpunit": "^9.5.21 || ^10.5.9 || ^11.0.0",
                 "scrutinizer/ocular": "^1.8.1",
-                "symfony/finder": "^5.3 | ^6.0 || ^7.0",
-                "symfony/yaml": "^2.3 | ^3.0 | ^4.0 | ^5.0 | ^6.0 || ^7.0",
+                "symfony/finder": "^5.3 | ^6.0 | ^7.0",
+                "symfony/process": "^5.4 | ^6.0 | ^7.0",
+                "symfony/yaml": "^2.3 | ^3.0 | ^4.0 | ^5.0 | ^6.0 | ^7.0",
                 "unleashedtech/php-coding-standard": "^3.1.1",
                 "vimeo/psalm": "^4.24.0 || ^5.0.0"
             },
@@ -5491,7 +5480,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "2.6-dev"
+                    "dev-main": "2.7-dev"
                 }
             },
             "autoload": {
@@ -5548,7 +5537,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-08-16T11:46:16+00:00"
+            "time": "2024-12-07T15:34:16+00:00"
         },
         {
             "name": "league/config",
@@ -6720,16 +6709,16 @@
         },
         {
             "name": "predis/predis",
-            "version": "v2.2.2",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/predis/predis.git",
-                "reference": "b1d3255ed9ad4d7254f9f9bba386c99f4bb983d1"
+                "reference": "bac46bfdb78cd6e9c7926c697012aae740cb9ec9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/predis/predis/zipball/b1d3255ed9ad4d7254f9f9bba386c99f4bb983d1",
-                "reference": "b1d3255ed9ad4d7254f9f9bba386c99f4bb983d1",
+                "url": "https://api.github.com/repos/predis/predis/zipball/bac46bfdb78cd6e9c7926c697012aae740cb9ec9",
+                "reference": "bac46bfdb78cd6e9c7926c697012aae740cb9ec9",
                 "shasum": ""
             },
             "require": {
@@ -6738,7 +6727,7 @@
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.3",
                 "phpstan/phpstan": "^1.9",
-                "phpunit/phpunit": "^8.0 || ~9.4.4"
+                "phpunit/phpunit": "^8.0 || ^9.4"
             },
             "suggest": {
                 "ext-relay": "Faster connection with in-memory caching (>=0.6.2)"
@@ -6769,7 +6758,7 @@
             ],
             "support": {
                 "issues": "https://github.com/predis/predis/issues",
-                "source": "https://github.com/predis/predis/tree/v2.2.2"
+                "source": "https://github.com/predis/predis/tree/v2.3.0"
             },
             "funding": [
                 {
@@ -6777,7 +6766,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-13T16:42:03+00:00"
+            "time": "2024-11-21T20:00:02+00:00"
         },
         {
             "name": "psr/clock",
@@ -8262,16 +8251,16 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v7.1.6",
+            "version": "v7.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
-                "reference": "4aa4f6b3d6749c14d3aa815eef8226632e7bbc66"
+                "reference": "601a5ce9aaad7bf10797e3663faefce9e26c24e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/4aa4f6b3d6749c14d3aa815eef8226632e7bbc66",
-                "reference": "4aa4f6b3d6749c14d3aa815eef8226632e7bbc66",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/601a5ce9aaad7bf10797e3663faefce9e26c24e2",
+                "reference": "601a5ce9aaad7bf10797e3663faefce9e26c24e2",
                 "shasum": ""
             },
             "require": {
@@ -8307,7 +8296,7 @@
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/css-selector/tree/v7.1.6"
+                "source": "https://github.com/symfony/css-selector/tree/v7.2.0"
             },
             "funding": [
                 {
@@ -8323,20 +8312,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-09-25T14:20:29+00:00"
+            "time": "2024-09-25T14:21:43+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
-            "version": "v3.5.0",
+            "version": "v3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1"
+                "reference": "74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1",
-                "reference": "0e0d29ce1f20deffb4ab1b016a7257c4f1e789a1",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6",
+                "reference": "74c71c939a79f7d5bf3c1ce9f5ea37ba0114c6f6",
                 "shasum": ""
             },
             "require": {
@@ -8374,7 +8363,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.5.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.5.1"
             },
             "funding": [
                 {
@@ -8390,7 +8379,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-18T09:32:20+00:00"
+            "time": "2024-09-25T14:20:29+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -8479,16 +8468,16 @@
         },
         {
             "name": "symfony/event-dispatcher-contracts",
-            "version": "v3.5.0",
+            "version": "v3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher-contracts.git",
-                "reference": "8f93aec25d41b72493c6ddff14e916177c9efc50"
+                "reference": "7642f5e970b672283b7823222ae8ef8bbc160b9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/8f93aec25d41b72493c6ddff14e916177c9efc50",
-                "reference": "8f93aec25d41b72493c6ddff14e916177c9efc50",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher-contracts/zipball/7642f5e970b672283b7823222ae8ef8bbc160b9f",
+                "reference": "7642f5e970b672283b7823222ae8ef8bbc160b9f",
                 "shasum": ""
             },
             "require": {
@@ -8535,7 +8524,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.5.0"
+                "source": "https://github.com/symfony/event-dispatcher-contracts/tree/v3.5.1"
             },
             "funding": [
                 {
@@ -8551,7 +8540,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-18T09:32:20+00:00"
+            "time": "2024-09-25T14:20:29+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -8684,16 +8673,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v5.4.46",
+            "version": "v5.4.48",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "168b77c71e6f02d8fc479db78beaf742a37d3cab"
+                "reference": "3f38b8af283b830e1363acd79e5bc3412d055341"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/168b77c71e6f02d8fc479db78beaf742a37d3cab",
-                "reference": "168b77c71e6f02d8fc479db78beaf742a37d3cab",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/3f38b8af283b830e1363acd79e5bc3412d055341",
+                "reference": "3f38b8af283b830e1363acd79e5bc3412d055341",
                 "shasum": ""
             },
             "require": {
@@ -8740,7 +8729,7 @@
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/http-foundation/tree/v5.4.46"
+                "source": "https://github.com/symfony/http-foundation/tree/v5.4.48"
             },
             "funding": [
                 {
@@ -8756,7 +8745,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-11-05T15:52:21+00:00"
+            "time": "2024-11-13T18:58:02+00:00"
         },
         {
             "name": "symfony/mime",
@@ -8869,8 +8858,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -9025,8 +9014,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -9104,8 +9093,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -9186,8 +9175,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -9267,8 +9256,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -9351,8 +9340,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -9425,8 +9414,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -9501,8 +9490,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -9581,8 +9570,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -9701,16 +9690,16 @@
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v3.5.0",
+            "version": "v3.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "bd1d9e59a81d8fa4acdcea3f617c581f7475a80f"
+                "reference": "e53260aabf78fb3d63f8d79d69ece59f80d5eda0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/bd1d9e59a81d8fa4acdcea3f617c581f7475a80f",
-                "reference": "bd1d9e59a81d8fa4acdcea3f617c581f7475a80f",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/e53260aabf78fb3d63f8d79d69ece59f80d5eda0",
+                "reference": "e53260aabf78fb3d63f8d79d69ece59f80d5eda0",
                 "shasum": ""
             },
             "require": {
@@ -9764,7 +9753,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/service-contracts/tree/v3.5.0"
+                "source": "https://github.com/symfony/service-contracts/tree/v3.5.1"
             },
             "funding": [
                 {
@@ -9780,7 +9769,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-18T09:32:20+00:00"
+            "time": "2024-09-25T14:20:29+00:00"
         },
         {
             "name": "symfony/string",
@@ -9967,16 +9956,16 @@
         },
         {
             "name": "symfony/translation-contracts",
-            "version": "v2.5.3",
+            "version": "v2.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation-contracts.git",
-                "reference": "b0073a77ac0b7ea55131020e87b1e3af540f4664"
+                "reference": "450d4172653f38818657022252f9d81be89ee9a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/b0073a77ac0b7ea55131020e87b1e3af540f4664",
-                "reference": "b0073a77ac0b7ea55131020e87b1e3af540f4664",
+                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/450d4172653f38818657022252f9d81be89ee9a8",
+                "reference": "450d4172653f38818657022252f9d81be89ee9a8",
                 "shasum": ""
             },
             "require": {
@@ -10025,7 +10014,7 @@
                 "standards"
             ],
             "support": {
-                "source": "https://github.com/symfony/translation-contracts/tree/v2.5.3"
+                "source": "https://github.com/symfony/translation-contracts/tree/v2.5.4"
             },
             "funding": [
                 {
@@ -10041,7 +10030,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-01-23T13:51:25+00:00"
+            "time": "2024-09-25T14:11:13+00:00"
         },
         {
             "name": "symfony/yaml",
