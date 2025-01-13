@@ -79,13 +79,13 @@
             "type": "flarum-extension",
             "extra": {
                 "flarum-extension": {
-                    "title": "Cache Assets",
-                    "category": "other",
                     "icon": {
                         "name": "fas fa-box-open",
-                        "backgroundColor": "#EBF1FD",
-                        "color": "#3a98d0"
-                    }
+                        "color": "#3a98d0",
+                        "backgroundColor": "#EBF1FD"
+                    },
+                    "title": "Cache Assets",
+                    "category": "other"
                 }
             },
             "autoload": {
@@ -2765,16 +2765,16 @@
         },
         {
             "name": "fof/anti-spam",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/anti-spam.git",
-                "reference": "5843f5f2bc137c32ea6538c1f82fa8e4ed3e3be3"
+                "reference": "6551e2c77f166b0edf26144eda51869478998de3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/anti-spam/zipball/5843f5f2bc137c32ea6538c1f82fa8e4ed3e3be3",
-                "reference": "5843f5f2bc137c32ea6538c1f82fa8e4ed3e3be3",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/anti-spam/zipball/6551e2c77f166b0edf26144eda51869478998de3",
+                "reference": "6551e2c77f166b0edf26144eda51869478998de3",
                 "shasum": ""
             },
             "require": {
@@ -2862,7 +2862,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2023-12-08T11:07:02+00:00"
+            "time": "2025-01-07T13:34:36+00:00"
         },
         {
             "name": "fof/filter",
@@ -2973,18 +2973,6 @@
             },
             "type": "flarum-extension",
             "extra": {
-                "flarum-extension": {
-                    "title": "FoF Moderator Notes",
-                    "category": "feature",
-                    "icon": {
-                        "name": "fas fa-sticky-note",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#fff"
-                    },
-                    "optional-dependencies": [
-                        "fof/impersonate"
-                    ]
-                },
                 "flagrow": {
                     "discuss": "https://discuss.flarum.org/d/22925"
                 },
@@ -2992,6 +2980,18 @@
                     "modules": {
                         "githubActions": true
                     }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-sticky-note",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Moderator Notes",
+                    "category": "feature",
+                    "optional-dependencies": [
+                        "fof/impersonate"
+                    ]
                 }
             },
             "autoload": {
@@ -3060,26 +3060,26 @@
             },
             "type": "flarum-extension",
             "extra": {
-                "flarum-extension": {
-                    "title": "FoF Night Mode",
-                    "category": "feature",
-                    "icon": {
-                        "name": "far fa-moon",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#fff"
-                    }
-                },
                 "flagrow": {
                     "discuss": "https://discuss.flarum.org/d/21492"
                 },
-                "optional-dependencies": [
-                    "fof/default-user-preferences"
-                ],
                 "flarum-cli": {
                     "modules": {
                         "githubActions": true
                     }
-                }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "far fa-moon",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Night Mode",
+                    "category": "feature"
+                },
+                "optional-dependencies": [
+                    "fof/default-user-preferences"
+                ]
             },
             "autoload": {
                 "files": [
@@ -3162,19 +3162,6 @@
             },
             "type": "flarum-extension",
             "extra": {
-                "flarum-extension": {
-                    "title": "FoF Sitemap",
-                    "category": "feature",
-                    "icon": {
-                        "name": "fas fa-sitemap",
-                        "backgroundColor": "#e74c3c",
-                        "color": "#fff"
-                    },
-                    "optional-dependencies": [
-                        "flarum/tags",
-                        "fof/pages"
-                    ]
-                },
                 "flagrow": {
                     "discuss": "https://discuss.flarum.org/d/14941"
                 },
@@ -3182,6 +3169,19 @@
                     "modules": {
                         "githubActions": true
                     }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-sitemap",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Sitemap",
+                    "category": "feature",
+                    "optional-dependencies": [
+                        "flarum/tags",
+                        "fof/pages"
+                    ]
                 }
             },
             "autoload": {
@@ -5021,16 +5021,16 @@
             },
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "3.0-dev"
-                },
                 "laravel": {
-                    "providers": [
-                        "Jenssegers\\Agent\\AgentServiceProvider"
-                    ],
                     "aliases": {
                         "Agent": "Jenssegers\\Agent\\Facades\\Agent"
-                    }
+                    },
+                    "providers": [
+                        "Jenssegers\\Agent\\AgentServiceProvider"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -5117,8 +5117,8 @@
             "type": "library",
             "extra": {
                 "laminas": {
-                    "config-provider": "Laminas\\Diactoros\\ConfigProvider",
-                    "module": "Laminas\\Diactoros"
+                    "module": "Laminas\\Diactoros",
+                    "config-provider": "Laminas\\Diactoros\\ConfigProvider"
                 }
             },
             "autoload": {
@@ -5434,16 +5434,16 @@
         },
         {
             "name": "league/commonmark",
-            "version": "2.6.0",
+            "version": "2.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/commonmark.git",
-                "reference": "d150f911e0079e90ae3c106734c93137c184f932"
+                "reference": "d990688c91cedfb69753ffc2512727ec646df2ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/d150f911e0079e90ae3c106734c93137c184f932",
-                "reference": "d150f911e0079e90ae3c106734c93137c184f932",
+                "url": "https://api.github.com/repos/thephpleague/commonmark/zipball/d990688c91cedfb69753ffc2512727ec646df2ad",
+                "reference": "d990688c91cedfb69753ffc2512727ec646df2ad",
                 "shasum": ""
             },
             "require": {
@@ -5537,7 +5537,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-07T15:34:16+00:00"
+            "time": "2024-12-29T14:10:59+00:00"
         },
         {
             "name": "league/config",
@@ -6342,16 +6342,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "2.72.5",
+            "version": "2.72.6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "afd46589c216118ecd48ff2b95d77596af1e57ed"
+                "url": "https://github.com/CarbonPHP/carbon.git",
+                "reference": "1e9d50601e7035a4c61441a208cb5bed73e108c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/afd46589c216118ecd48ff2b95d77596af1e57ed",
-                "reference": "afd46589c216118ecd48ff2b95d77596af1e57ed",
+                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/1e9d50601e7035a4c61441a208cb5bed73e108c5",
+                "reference": "1e9d50601e7035a4c61441a208cb5bed73e108c5",
                 "shasum": ""
             },
             "require": {
@@ -6371,7 +6371,7 @@
                 "doctrine/orm": "^2.7 || ^3.0",
                 "friendsofphp/php-cs-fixer": "^3.0",
                 "kylekatarnls/multi-tester": "^2.0",
-                "ondrejmirtes/better-reflection": "*",
+                "ondrejmirtes/better-reflection": "<6",
                 "phpmd/phpmd": "^2.9",
                 "phpstan/extension-installer": "^1.0",
                 "phpstan/phpstan": "^0.12.99 || ^1.7.14",
@@ -6384,10 +6384,6 @@
             ],
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-master": "3.x-dev",
-                    "dev-2.x": "2.x-dev"
-                },
                 "laravel": {
                     "providers": [
                         "Carbon\\Laravel\\ServiceProvider"
@@ -6397,6 +6393,10 @@
                     "includes": [
                         "extension.neon"
                     ]
+                },
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev",
+                    "dev-master": "3.x-dev"
                 }
             },
             "autoload": {
@@ -6445,7 +6445,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-03T19:18:41+00:00"
+            "time": "2024-12-27T09:28:11+00:00"
         },
         {
             "name": "nette/schema",
@@ -8333,12 +8333,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -8486,12 +8486,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -8937,8 +8937,8 @@
             "type": "library",
             "extra": {
                 "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
+                    "url": "https://github.com/symfony/polyfill",
+                    "name": "symfony/polyfill"
                 }
             },
             "autoload": {
@@ -9712,12 +9712,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "3.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -9976,12 +9976,12 @@
             },
             "type": "library",
             "extra": {
+                "thanks": {
+                    "url": "https://github.com/symfony/contracts",
+                    "name": "symfony/contracts"
+                },
                 "branch-alias": {
                     "dev-main": "2.5-dev"
-                },
-                "thanks": {
-                    "name": "symfony/contracts",
-                    "url": "https://github.com/symfony/contracts"
                 }
             },
             "autoload": {
@@ -10109,31 +10109,33 @@
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
-            "version": "v2.2.7",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tijsverkoyen/CssToInlineStyles.git",
-                "reference": "83ee6f38df0a63106a9e4536e3060458b74ccedb"
+                "reference": "0d72ac1c00084279c1816675284073c5a337c20d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/83ee6f38df0a63106a9e4536e3060458b74ccedb",
-                "reference": "83ee6f38df0a63106a9e4536e3060458b74ccedb",
+                "url": "https://api.github.com/repos/tijsverkoyen/CssToInlineStyles/zipball/0d72ac1c00084279c1816675284073c5a337c20d",
+                "reference": "0d72ac1c00084279c1816675284073c5a337c20d",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-libxml": "*",
-                "php": "^5.5 || ^7.0 || ^8.0",
-                "symfony/css-selector": "^2.7 || ^3.0 || ^4.0 || ^5.0 || ^6.0 || ^7.0"
+                "php": "^7.4 || ^8.0",
+                "symfony/css-selector": "^5.4 || ^6.0 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0 || ^7.5 || ^8.5.21 || ^9.5.10"
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-phpunit": "^2.0",
+                "phpunit/phpunit": "^8.5.21 || ^9.5.10"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "autoload": {
@@ -10156,9 +10158,9 @@
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "support": {
                 "issues": "https://github.com/tijsverkoyen/CssToInlineStyles/issues",
-                "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.2.7"
+                "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/v2.3.0"
             },
-            "time": "2023-12-08T13:03:43+00:00"
+            "time": "2024-12-21T16:25:41+00:00"
         },
         {
             "name": "voku/portable-ascii",
