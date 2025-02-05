@@ -1174,16 +1174,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.16.0",
+            "version": "2.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "befcdc0e5dce67252aa6322d82424be928214fa2"
+                "reference": "075bc0c26631110584175de6523ab3f1652eb28e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/befcdc0e5dce67252aa6322d82424be928214fa2",
-                "reference": "befcdc0e5dce67252aa6322d82424be928214fa2",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/075bc0c26631110584175de6523ab3f1652eb28e",
+                "reference": "075bc0c26631110584175de6523ab3f1652eb28e",
                 "shasum": ""
             },
             "require": {
@@ -1233,7 +1233,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.16.0"
+                "source": "https://github.com/filp/whoops/tree/2.17.0"
             },
             "funding": [
                 {
@@ -1241,7 +1241,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-09-25T12:00:00+00:00"
+            "time": "2025-01-25T12:00:00+00:00"
         },
         {
             "name": "flarum/approval",
@@ -5949,28 +5949,28 @@
         },
         {
             "name": "middlewares/base-path-router",
-            "version": "v2.0.1",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/middlewares/base-path-router.git",
-                "reference": "36e3860cfd917ad51d10e238f82796c8b2504908"
+                "reference": "870ac77ba83eea49c338e043aafbeb8ed69a541e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/middlewares/base-path-router/zipball/36e3860cfd917ad51d10e238f82796c8b2504908",
-                "reference": "36e3860cfd917ad51d10e238f82796c8b2504908",
+                "url": "https://api.github.com/repos/middlewares/base-path-router/zipball/870ac77ba83eea49c338e043aafbeb8ed69a541e",
+                "reference": "870ac77ba83eea49c338e043aafbeb8ed69a541e",
                 "shasum": ""
             },
             "require": {
-                "middlewares/utils": "^3.0",
+                "middlewares/utils": "^3.0 || ^4.0",
                 "php": "^7.2 || ^8.0",
                 "psr/http-server-middleware": "^1.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.0",
-                "laminas/laminas-diactoros": "^2.3",
+                "laminas/laminas-diactoros": "^2|^3",
                 "oscarotero/php-cs-fixer-config": "^1.0",
-                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan": "^0.12 || ^1.0",
                 "phpunit/phpunit": "^8|^9",
                 "squizlabs/php_codesniffer": "^3.0"
             },
@@ -5996,9 +5996,9 @@
             ],
             "support": {
                 "issues": "https://github.com/middlewares/base-path-router/issues",
-                "source": "https://github.com/middlewares/base-path-router/tree/v2.0.1"
+                "source": "https://github.com/middlewares/base-path-router/tree/v2.0.2"
             },
-            "time": "2020-12-02T00:05:22+00:00"
+            "time": "2025-02-01T17:40:21+00:00"
         },
         {
             "name": "middlewares/request-handler",
