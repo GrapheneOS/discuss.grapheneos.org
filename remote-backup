@@ -10,6 +10,7 @@ mkdir remote-backup/$timestamp
 mariadb-dump --all-databases --single-transaction > remote-backup/$timestamp/all_databases.sql
 cp /var/lib/valkey/dump.rdb remote-backup/$timestamp/
 cp -r /opt/flarum remote-backup/$timestamp/flarum
+rsync -rl --exclude '/storage/cache/*' --exclude '/storage/gdpr-exports/*' --exclude '/storage/sessions/*' --exclude '/storage/tmp/*' /opt/flarum/ remote-backup/$timestamp/flarum
 tar -cC remote-backup $timestamp | zstd -9 | age -r $(cat backup-public-key.txt) -o remote-backup/$timestamp.tar.zst.age
 
 source cloud-archive.sh
