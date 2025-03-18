@@ -22,7 +22,6 @@
     },
     "require": {
         "blomstra/cache-assets": "*",
-        "blomstra/flarum-redis": "*",
         "flarum/approval": "*",
         "flarum/bbcode": "*",
         "flarum/core": "^1.5",
@@ -45,6 +44,7 @@
         "fof/filter": "*",
         "fof/moderator-notes": "*",
         "fof/nightmode": "*",
+        "fof/redis": "^1.0",
         "fof/sitemap": "*",
         "fof/user-bio": "*"
     },

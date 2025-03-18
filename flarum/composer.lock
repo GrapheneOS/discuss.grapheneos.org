@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "71398e891758cd14e67688d1ed215f4f",
+    "content-hash": "13dba20ccc8243cabc121043bd276bbb",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -119,59 +119,6 @@
                 "source": "https://github.com/blomstra/flarum-ext-cache-assets/tree/0.5"
             },
             "time": "2021-06-04T12:10:26+00:00"
-        },
-        {
-            "name": "blomstra/flarum-redis",
-            "version": "0.4.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/blomstra/flarum-redis.git",
-                "reference": "4322363138d0798a13d2b35d464af50e87b4ff21"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/blomstra/flarum-redis/zipball/4322363138d0798a13d2b35d464af50e87b4ff21",
-                "reference": "4322363138d0798a13d2b35d464af50e87b4ff21",
-                "shasum": ""
-            },
-            "require": {
-                "flarum/core": "^1.0.0",
-                "illuminate/redis": "*",
-                "predis/predis": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Blomstra\\Redis\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Team Blomstra",
-                    "email": "development@blomstra.net"
-                }
-            ],
-            "description": "Adds Redis cache, sessions and queue to Flarum",
-            "homepage": "https://blomstra.net",
-            "keywords": [
-                "blomstra",
-                "cache",
-                "flarum",
-                "queue",
-                "redis",
-                "session"
-            ],
-            "support": {
-                "forum": "https://discuss.flarum.org/d/21873",
-                "issues": "https://github.com/blomstra/flarum-redis/issues",
-                "source": "https://github.com/blomstra/flarum-redis"
-            },
-            "abandoned": "fof/redis",
-            "time": "2022-03-03T21:05:29+00:00"
         },
         {
             "name": "brick/math",
@@ -3130,6 +3077,70 @@
                 }
             ],
             "time": "2024-10-19T10:06:15+00:00"
+        },
+        {
+            "name": "fof/redis",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/redis.git",
+                "reference": "aa5563798d2b5e2c500caf965e40947cfc9e0e53"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/redis/zipball/aa5563798d2b5e2c500caf965e40947cfc9e0e53",
+                "reference": "aa5563798d2b5e2c500caf965e40947cfc9e0e53",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.0.0",
+                "illuminate/redis": "*",
+                "predis/predis": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alais": {
+                    "1.x": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\Redis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "FriendsOfFlarum",
+                    "homepage": "https://friendsofflarum.org"
+                }
+            ],
+            "description": "Adds Redis cache, sessions and queue to Flarum",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "cache",
+                "queue",
+                "redis",
+                "session"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/21873",
+                "issues": "https://github.com/FriendsOfFlarum/redis/issues",
+                "source": "https://github.com/FriendsOfFlarum/redis"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2025-02-15T17:45:38+00:00"
         },
         {
             "name": "fof/sitemap",

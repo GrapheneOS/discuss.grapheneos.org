@@ -28,7 +28,7 @@ return [
 <link rel="manifest" href="/manifest.webmanifest"/>
             ';
         }),
-    (new Blomstra\Redis\Extend\Redis([
+    (new FoF\Redis\Extend\Redis([
         'scheme' => 'unix',
         'path' => '/run/valkey/valkey.sock',
         'port' => 0,
