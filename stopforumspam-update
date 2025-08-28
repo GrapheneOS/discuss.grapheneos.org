@@ -9,18 +9,18 @@ mode="$1"
 [[ $mode == @(daily|hourly) ]] || exit 1
 
 if [[ $mode == daily ]]; then
-    curl --fail-with-body https://www.stopforumspam.com/downloads/toxic_ip_cidr.txt | awk '{ print $1 " 1;" }' > stopforumspam-toxic_ip_cidr.conf.new
+    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/toxic_ip_cidr.txt | awk '{ print $1 " 1;" }' > stopforumspam-toxic_ip_cidr.conf.new
     mv stopforumspam-toxic_ip_cidr.conf.new stopforumspam-toxic_ip_cidr.conf
 
-    curl --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30.zip | gunzip > stopforumspam-listed_ip_30.txt.new
+    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30.zip | gunzip > stopforumspam-listed_ip_30.txt.new
     mv stopforumspam-listed_ip_30.txt.new stopforumspam-listed_ip_30.txt
 fi
 
 if [[ $mode == hourly ]]; then
-    curl --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1.zip | gunzip > stopforumspam-listed_ip_1.txt.new
+    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1.zip | gunzip > stopforumspam-listed_ip_1.txt.new
     mv stopforumspam-listed_ip_1.txt.new stopforumspam-listed_ip_1.txt
 
-    if curl --fail-with-body https://check.torproject.org/torbulkexitlist | sort -u > torbulkexitlist.txt.new; then
+    if curl -sS --fail-with-body https://check.torproject.org/torbulkexitlist | sort -u > torbulkexitlist.txt.new; then
         mv torbulkexitlist.txt.new torbulkexitlist.txt
     fi
 
