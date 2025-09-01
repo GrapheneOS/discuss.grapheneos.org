@@ -3146,21 +3146,22 @@
         },
         {
             "name": "fof/sitemap",
-            "version": "2.2.1",
+            "version": "2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/sitemap.git",
-                "reference": "1f6d0891a132b0bfe2aca4cab3e5939224484908"
+                "reference": "da28d459dc8f5dbaf36be1db908a7245af52e9d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/sitemap/zipball/1f6d0891a132b0bfe2aca4cab3e5939224484908",
-                "reference": "1f6d0891a132b0bfe2aca4cab3e5939224484908",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/sitemap/zipball/da28d459dc8f5dbaf36be1db908a7245af52e9d8",
+                "reference": "da28d459dc8f5dbaf36be1db908a7245af52e9d8",
                 "shasum": ""
             },
             "require": {
                 "flarum/core": "^1.3.1",
-                "php": "8.*"
+                "guzzlehttp/guzzle": "*",
+                "php": "^8.0"
             },
             "replace": {
                 "flagrow/sitemap": "*"
@@ -3168,6 +3169,7 @@
             "require-dev": {
                 "flarum/phpstan": "*",
                 "flarum/tags": "*",
+                "flarum/testing": "^1.0.0",
                 "fof/pages": "*"
             },
             "suggest": {
@@ -3181,7 +3183,8 @@
                 },
                 "flarum-cli": {
                     "modules": {
-                        "githubActions": true
+                        "githubActions": true,
+                        "backendTesting": true
                     }
                 },
                 "flarum-extension": {
@@ -3238,7 +3241,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2023-11-12T22:14:27+00:00"
+            "time": "2025-09-01T11:34:34+00:00"
         },
         {
             "name": "fof/user-bio",
@@ -9808,16 +9811,16 @@
         },
         {
             "name": "symfony/string",
-            "version": "v6.4.24",
+            "version": "v6.4.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "f0ce0bd36a3accb4a225435be077b4b4875587f4"
+                "reference": "7cdec7edfaf2cdd9c18901e35bcf9653d6209ff1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/f0ce0bd36a3accb4a225435be077b4b4875587f4",
-                "reference": "f0ce0bd36a3accb4a225435be077b4b4875587f4",
+                "url": "https://api.github.com/repos/symfony/string/zipball/7cdec7edfaf2cdd9c18901e35bcf9653d6209ff1",
+                "reference": "7cdec7edfaf2cdd9c18901e35bcf9653d6209ff1",
                 "shasum": ""
             },
             "require": {
@@ -9874,7 +9877,7 @@
                 "utf8"
             ],
             "support": {
-                "source": "https://github.com/symfony/string/tree/v6.4.24"
+                "source": "https://github.com/symfony/string/tree/v6.4.25"
             },
             "funding": [
                 {
@@ -9894,7 +9897,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-07-10T08:14:14+00:00"
+            "time": "2025-08-22T12:33:20+00:00"
         },
         {
             "name": "symfony/translation",
