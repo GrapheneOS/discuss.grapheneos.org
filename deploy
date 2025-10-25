@@ -11,7 +11,7 @@ if ! flock -n $fd; then
     exit 1
 fi
 
-gixy --skips hash_without_default nginx/nginx.conf
+gixy nginx/nginx.conf
 
 remote=root@discuss.grapheneos.org
 
