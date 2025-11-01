@@ -20,8 +20,7 @@ ssh $remote nginx -s reload
 
 rsync -pcv --chmod=F644 --fsync --preallocate valkey/valkey.conf $remote:/etc/valkey/valkey.conf
 rsync -pcv --chmod=F644 --fsync --preallocate tmpfiles.d/valkey.conf $remote:/etc/tmpfiles.d/valkey.conf
-ssh $remote usermod flarum -G valkey
-ssh $remote usermod flarum-admin -G valkey
+ssh $remote 'usermod -aG valkey flarum && usermod -aG valkey flarum-admin'
 ssh $remote chmod 750 /var/lib/valkey
 
 rsync -pcv --chmod=D755,F644 --fsync --preallocate my.cnf.d/server.cnf $remote:/etc/my.cnf.d/server.cnf
