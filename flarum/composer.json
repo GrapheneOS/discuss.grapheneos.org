@@ -44,7 +44,7 @@
         "fof/filter": "*",
         "fof/moderator-notes": "*",
         "fof/nightmode": "*",
-        "fof/redis": "^1.0",
+        "fof/redis": "*",
         "fof/sitemap": "*",
         "fof/user-bio": "*"
     },
