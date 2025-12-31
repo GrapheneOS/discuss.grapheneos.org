@@ -3146,16 +3146,16 @@
         },
         {
             "name": "fof/sitemap",
-            "version": "2.4.1",
+            "version": "2.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/sitemap.git",
-                "reference": "202519bef2c52823f857c4c2f3fb2c4ce3856275"
+                "reference": "b0a111b88b821c49cb392f34f479999c2964195d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/sitemap/zipball/202519bef2c52823f857c4c2f3fb2c4ce3856275",
-                "reference": "202519bef2c52823f857c4c2f3fb2c4ce3856275",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/sitemap/zipball/b0a111b88b821c49cb392f34f479999c2964195d",
+                "reference": "b0a111b88b821c49cb392f34f479999c2964195d",
                 "shasum": ""
             },
             "require": {
@@ -3242,7 +3242,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2025-10-02T08:51:52+00:00"
+            "time": "2025-12-30T12:52:40+00:00"
         },
         {
             "name": "fof/user-bio",
@@ -10379,5 +10379,5 @@
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.6.0"
 }
