@@ -1351,16 +1351,16 @@
         },
         {
             "name": "flarum/core",
-            "version": "v1.8.11",
+            "version": "v1.8.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/flarum-core.git",
-                "reference": "ee319329968aa7ce9ca7be6153887abe77a84c80"
+                "reference": "681f602c5fa8d4afd5d43ae9921551b9906699fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/ee319329968aa7ce9ca7be6153887abe77a84c80",
-                "reference": "ee319329968aa7ce9ca7be6153887abe77a84c80",
+                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/681f602c5fa8d4afd5d43ae9921551b9906699fd",
+                "reference": "681f602c5fa8d4afd5d43ae9921551b9906699fd",
                 "shasum": ""
             },
             "require": {
@@ -1493,7 +1493,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2025-10-08T17:57:23+00:00"
+            "time": "2026-01-07T08:54:15+00:00"
         },
         {
             "name": "flarum/emoji",
@@ -2556,16 +2556,16 @@
         },
         {
             "name": "flarum/suspend",
-            "version": "v1.8.4",
+            "version": "v1.8.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/suspend.git",
-                "reference": "8c62430d238f650eeb54323c204b335d9c39f771"
+                "reference": "2c1050ec8e7d482e272f787b3686916c235b6f66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/suspend/zipball/8c62430d238f650eeb54323c204b335d9c39f771",
-                "reference": "8c62430d238f650eeb54323c204b335d9c39f771",
+                "url": "https://api.github.com/repos/flarum/suspend/zipball/2c1050ec8e7d482e272f787b3686916c235b6f66",
+                "reference": "2c1050ec8e7d482e272f787b3686916c235b6f66",
                 "shasum": ""
             },
             "require": {
@@ -2631,7 +2631,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2024-11-20T08:51:17+00:00"
+            "time": "2026-01-07T10:12:49+00:00"
         },
         {
             "name": "flarum/tags",
@@ -10379,5 +10379,5 @@
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.6.0"
 }
