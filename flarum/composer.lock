@@ -1351,16 +1351,16 @@
         },
         {
             "name": "flarum/core",
-            "version": "v1.8.11",
+            "version": "v1.8.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/flarum-core.git",
-                "reference": "ee319329968aa7ce9ca7be6153887abe77a84c80"
+                "reference": "681f602c5fa8d4afd5d43ae9921551b9906699fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/ee319329968aa7ce9ca7be6153887abe77a84c80",
-                "reference": "ee319329968aa7ce9ca7be6153887abe77a84c80",
+                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/681f602c5fa8d4afd5d43ae9921551b9906699fd",
+                "reference": "681f602c5fa8d4afd5d43ae9921551b9906699fd",
                 "shasum": ""
             },
             "require": {
@@ -1493,7 +1493,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2025-10-08T17:57:23+00:00"
+            "time": "2026-01-07T08:54:15+00:00"
         },
         {
             "name": "flarum/emoji",
@@ -2635,16 +2635,16 @@
         },
         {
             "name": "flarum/tags",
-            "version": "v1.8.5",
+            "version": "v1.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/tags.git",
-                "reference": "1f8bcd261da7c3d4967785a5836ab641ad1ac991"
+                "reference": "8d54abd32e98ed6a7f6db30bce0d81185f6292ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/tags/zipball/1f8bcd261da7c3d4967785a5836ab641ad1ac991",
-                "reference": "1f8bcd261da7c3d4967785a5836ab641ad1ac991",
+                "url": "https://api.github.com/repos/flarum/tags/zipball/8d54abd32e98ed6a7f6db30bce0d81185f6292ad",
+                "reference": "8d54abd32e98ed6a7f6db30bce0d81185f6292ad",
                 "shasum": ""
             },
             "require": {
@@ -2652,6 +2652,7 @@
             },
             "require-dev": {
                 "flarum/core": "*@dev",
+                "flarum/suspend": "*@dev",
                 "flarum/testing": "^1.0.0"
             },
             "type": "flarum-extension",
@@ -2711,7 +2712,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2025-10-03T11:14:51+00:00"
+            "time": "2026-01-05T09:01:55+00:00"
         },
         {
             "name": "fof/anti-spam",
@@ -10379,5 +10380,5 @@
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.6.0"
 }
