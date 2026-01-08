@@ -1351,16 +1351,16 @@
         },
         {
             "name": "flarum/core",
-            "version": "v1.8.11",
+            "version": "v1.8.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/flarum-core.git",
-                "reference": "ee319329968aa7ce9ca7be6153887abe77a84c80"
+                "reference": "681f602c5fa8d4afd5d43ae9921551b9906699fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/ee319329968aa7ce9ca7be6153887abe77a84c80",
-                "reference": "ee319329968aa7ce9ca7be6153887abe77a84c80",
+                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/681f602c5fa8d4afd5d43ae9921551b9906699fd",
+                "reference": "681f602c5fa8d4afd5d43ae9921551b9906699fd",
                 "shasum": ""
             },
             "require": {
@@ -1493,7 +1493,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2025-10-08T17:57:23+00:00"
+            "time": "2026-01-07T08:54:15+00:00"
         },
         {
             "name": "flarum/emoji",
@@ -3146,16 +3146,16 @@
         },
         {
             "name": "fof/sitemap",
-            "version": "2.4.2",
+            "version": "2.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/sitemap.git",
-                "reference": "b0a111b88b821c49cb392f34f479999c2964195d"
+                "reference": "b3ee4eb33e36731b821369bf3628d853479f6415"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/sitemap/zipball/b0a111b88b821c49cb392f34f479999c2964195d",
-                "reference": "b0a111b88b821c49cb392f34f479999c2964195d",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/sitemap/zipball/b3ee4eb33e36731b821369bf3628d853479f6415",
+                "reference": "b3ee4eb33e36731b821369bf3628d853479f6415",
                 "shasum": ""
             },
             "require": {
@@ -3242,7 +3242,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2025-12-30T12:52:40+00:00"
+            "time": "2026-01-07T13:28:41+00:00"
         },
         {
             "name": "fof/user-bio",
@@ -10379,5 +10379,5 @@
     "prefer-lowest": false,
     "platform": {},
     "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.6.0"
 }
