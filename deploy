@@ -32,5 +32,5 @@ rsync -pcv --chmod=644 --chown flarum-admin:flarum-admin --fsync --preallocate b
 rsync -pcv --chown root:geoipupdate --chmod=F640 --fsync --preallocate GeoIP.conf $remote:/etc/GeoIP.conf
 rsync -prcv --chmod=D755,F644 --fsync --preallocate systemd/system/ $remote:/etc/systemd/system/
 
-rsync -rpcv --chmod=D755,F644 --delete --fsync --preallocate nginx/{nginx.conf,mime.types,snippets,blocked.conf} $remote:/etc/nginx/
+rsync -pcv --chmod=644 --fsync --preallocate nginx/{blocked.conf,nginx.conf,mime.types,security-headers.conf} $remote:/etc/nginx/
 ssh $remote systemctl reload nginx
