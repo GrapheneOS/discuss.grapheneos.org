@@ -122,16 +122,16 @@
         },
         {
             "name": "brick/math",
-            "version": "0.14.1",
+            "version": "0.14.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/math.git",
-                "reference": "f05858549e5f9d7bb45875a75583240a38a281d0"
+                "reference": "07ff363b16ef8aca9692bba3be9e73fe63f34e50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/f05858549e5f9d7bb45875a75583240a38a281d0",
-                "reference": "f05858549e5f9d7bb45875a75583240a38a281d0",
+                "url": "https://api.github.com/repos/brick/math/zipball/07ff363b16ef8aca9692bba3be9e73fe63f34e50",
+                "reference": "07ff363b16ef8aca9692bba3be9e73fe63f34e50",
                 "shasum": ""
             },
             "require": {
@@ -170,7 +170,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brick/math/issues",
-                "source": "https://github.com/brick/math/tree/0.14.1"
+                "source": "https://github.com/brick/math/tree/0.14.7"
             },
             "funding": [
                 {
@@ -178,7 +178,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-11-24T14:40:29+00:00"
+            "time": "2026-02-07T10:57:35+00:00"
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -630,29 +630,29 @@
         },
         {
             "name": "doctrine/deprecations",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/deprecations.git",
-                "reference": "459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38"
+                "reference": "d4fe3e6fd9bb9e72557a19674f44d8ac7db4c6ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38",
-                "reference": "459c2f5dd3d6a4633d3b5f46ee2b1c40f57d3f38",
+                "url": "https://api.github.com/repos/doctrine/deprecations/zipball/d4fe3e6fd9bb9e72557a19674f44d8ac7db4c6ca",
+                "reference": "d4fe3e6fd9bb9e72557a19674f44d8ac7db4c6ca",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1 || ^8.0"
             },
             "conflict": {
-                "phpunit/phpunit": "<=7.5 || >=13"
+                "phpunit/phpunit": "<=7.5 || >=14"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^9 || ^12 || ^13",
-                "phpstan/phpstan": "1.4.10 || 2.1.11",
+                "doctrine/coding-standard": "^9 || ^12 || ^14",
+                "phpstan/phpstan": "1.4.10 || 2.1.30",
                 "phpstan/phpstan-phpunit": "^1.0 || ^2",
-                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.6 || ^10.5 || ^11.5 || ^12",
+                "phpunit/phpunit": "^7.5 || ^8.5 || ^9.6 || ^10.5 || ^11.5 || ^12.4 || ^13.0",
                 "psr/log": "^1 || ^2 || ^3"
             },
             "suggest": {
@@ -672,9 +672,9 @@
             "homepage": "https://www.doctrine-project.org/",
             "support": {
                 "issues": "https://github.com/doctrine/deprecations/issues",
-                "source": "https://github.com/doctrine/deprecations/tree/1.1.5"
+                "source": "https://github.com/doctrine/deprecations/tree/1.1.6"
             },
-            "time": "2025-04-07T20:06:18+00:00"
+            "time": "2026-02-07T07:09:04+00:00"
         },
         {
             "name": "doctrine/event-manager",
@@ -1351,16 +1351,16 @@
         },
         {
             "name": "flarum/core",
-            "version": "v1.8.12",
+            "version": "v1.8.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/flarum-core.git",
-                "reference": "681f602c5fa8d4afd5d43ae9921551b9906699fd"
+                "reference": "9043e420714058b54abc988c285c8117ebd31aa7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/681f602c5fa8d4afd5d43ae9921551b9906699fd",
-                "reference": "681f602c5fa8d4afd5d43ae9921551b9906699fd",
+                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/9043e420714058b54abc988c285c8117ebd31aa7",
+                "reference": "9043e420714058b54abc988c285c8117ebd31aa7",
                 "shasum": ""
             },
             "require": {
@@ -1493,7 +1493,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-01-07T08:54:15+00:00"
+            "time": "2026-02-09T11:39:21+00:00"
         },
         {
             "name": "flarum/emoji",
@@ -2899,16 +2899,16 @@
         },
         {
             "name": "fof/moderator-notes",
-            "version": "1.3.0",
+            "version": "1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/moderator-notes.git",
-                "reference": "c6c7a5f69d11c0eb1a1d045a3e8be502236ec954"
+                "reference": "c75bf78851cf3fb0d5b34a1595688defcef1f517"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/moderator-notes/zipball/c6c7a5f69d11c0eb1a1d045a3e8be502236ec954",
-                "reference": "c6c7a5f69d11c0eb1a1d045a3e8be502236ec954",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/moderator-notes/zipball/c75bf78851cf3fb0d5b34a1595688defcef1f517",
+                "reference": "c75bf78851cf3fb0d5b34a1595688defcef1f517",
                 "shasum": ""
             },
             "require": {
@@ -2982,7 +2982,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2024-10-27T09:58:29+00:00"
+            "time": "2026-02-06T10:40:53+00:00"
         },
         {
             "name": "fof/nightmode",
@@ -3083,29 +3083,30 @@
         },
         {
             "name": "fof/redis",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/redis.git",
-                "reference": "aa5563798d2b5e2c500caf965e40947cfc9e0e53"
+                "reference": "10c4ded549970edf7046e9c537a7388eab9ab7ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/redis/zipball/aa5563798d2b5e2c500caf965e40947cfc9e0e53",
-                "reference": "aa5563798d2b5e2c500caf965e40947cfc9e0e53",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/redis/zipball/10c4ded549970edf7046e9c537a7388eab9ab7ee",
+                "reference": "10c4ded549970edf7046e9c537a7388eab9ab7ee",
                 "shasum": ""
             },
             "require": {
-                "flarum/core": "^1.0.0",
+                "flarum/core": "^1.8.13",
                 "illuminate/redis": "*",
                 "predis/predis": "*"
             },
             "require-dev": {
-                "flarum/phpstan": "*"
+                "flarum/phpstan": "*",
+                "flarum/testing": "*"
             },
             "type": "library",
             "extra": {
-                "branch-alais": {
+                "branch-alias": {
                     "1.x": "1.x-dev"
                 }
             },
@@ -3143,7 +3144,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2025-02-15T17:45:38+00:00"
+            "time": "2026-02-09T12:25:27+00:00"
         },
         {
             "name": "fof/sitemap",
@@ -4962,23 +4963,23 @@
         },
         {
             "name": "jaybizzle/crawler-detect",
-            "version": "v1.3.6",
+            "version": "v1.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JayBizzle/Crawler-Detect.git",
-                "reference": "61f2ef1ad2d0ae922c265931cb0a8032a1ed2813"
+                "reference": "7f7a45b5d5df9c95ba6b2008544e6cf8e66de6f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/61f2ef1ad2d0ae922c265931cb0a8032a1ed2813",
-                "reference": "61f2ef1ad2d0ae922c265931cb0a8032a1ed2813",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/7f7a45b5d5df9c95ba6b2008544e6cf8e66de6f5",
+                "reference": "7f7a45b5d5df9c95ba6b2008544e6cf8e66de6f5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8|^5.5|^6.5|^9.4"
+                "phpunit/phpunit": "^4.8|^5.5|^6.5|^7.5|^8.5|^9.4"
             },
             "type": "library",
             "autoload": {
@@ -5008,9 +5009,9 @@
             ],
             "support": {
                 "issues": "https://github.com/JayBizzle/Crawler-Detect/issues",
-                "source": "https://github.com/JayBizzle/Crawler-Detect/tree/v1.3.6"
+                "source": "https://github.com/JayBizzle/Crawler-Detect/tree/v1.3.7"
             },
-            "time": "2025-09-30T16:22:43+00:00"
+            "time": "2026-02-02T19:15:54+00:00"
         },
         {
             "name": "jenssegers/agent",
@@ -6466,16 +6467,16 @@
         },
         {
             "name": "nette/schema",
-            "version": "v1.3.3",
+            "version": "v1.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/schema.git",
-                "reference": "2befc2f42d7c715fd9d95efc31b1081e5d765004"
+                "reference": "086497a2f34b82fede9b5a41cc8e131d087cd8f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/schema/zipball/2befc2f42d7c715fd9d95efc31b1081e5d765004",
-                "reference": "2befc2f42d7c715fd9d95efc31b1081e5d765004",
+                "url": "https://api.github.com/repos/nette/schema/zipball/086497a2f34b82fede9b5a41cc8e131d087cd8f7",
+                "reference": "086497a2f34b82fede9b5a41cc8e131d087cd8f7",
                 "shasum": ""
             },
             "require": {
@@ -6483,8 +6484,8 @@
                 "php": "8.1 - 8.5"
             },
             "require-dev": {
-                "nette/tester": "^2.5.2",
-                "phpstan/phpstan-nette": "^2.0@stable",
+                "nette/tester": "^2.6",
+                "phpstan/phpstan": "^2.0@stable",
                 "tracy/tracy": "^2.8"
             },
             "type": "library",
@@ -6525,22 +6526,22 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/schema/issues",
-                "source": "https://github.com/nette/schema/tree/v1.3.3"
+                "source": "https://github.com/nette/schema/tree/v1.3.4"
             },
-            "time": "2025-10-30T22:57:59+00:00"
+            "time": "2026-02-08T02:54:00+00:00"
         },
         {
             "name": "nette/utils",
-            "version": "v4.1.1",
+            "version": "v4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "c99059c0315591f1a0db7ad6002000288ab8dc72"
+                "reference": "f76b5dc3d6c6d3043c8d937df2698515b99cbaf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/c99059c0315591f1a0db7ad6002000288ab8dc72",
-                "reference": "c99059c0315591f1a0db7ad6002000288ab8dc72",
+                "url": "https://api.github.com/repos/nette/utils/zipball/f76b5dc3d6c6d3043c8d937df2698515b99cbaf5",
+                "reference": "f76b5dc3d6c6d3043c8d937df2698515b99cbaf5",
                 "shasum": ""
             },
             "require": {
@@ -6553,7 +6554,7 @@
             "require-dev": {
                 "jetbrains/phpstorm-attributes": "^1.2",
                 "nette/tester": "^2.5",
-                "phpstan/phpstan-nette": "^2.0@stable",
+                "phpstan/phpstan": "^2.0@stable",
                 "tracy/tracy": "^2.9"
             },
             "suggest": {
@@ -6614,9 +6615,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.1.1"
+                "source": "https://github.com/nette/utils/tree/v4.1.2"
             },
-            "time": "2025-12-22T12:14:32+00:00"
+            "time": "2026-02-03T17:21:09+00:00"
         },
         {
             "name": "nikic/fast-route",
