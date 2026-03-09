@@ -1351,16 +1351,16 @@
         },
         {
             "name": "flarum/core",
-            "version": "v1.8.13",
+            "version": "v1.8.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/flarum-core.git",
-                "reference": "9043e420714058b54abc988c285c8117ebd31aa7"
+                "reference": "2aed079055394e1156a57c0be7f3cf02d37a4d71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/9043e420714058b54abc988c285c8117ebd31aa7",
-                "reference": "9043e420714058b54abc988c285c8117ebd31aa7",
+                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/2aed079055394e1156a57c0be7f3cf02d37a4d71",
+                "reference": "2aed079055394e1156a57c0be7f3cf02d37a4d71",
                 "shasum": ""
             },
             "require": {
@@ -1493,7 +1493,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-02-09T11:39:21+00:00"
+            "time": "2026-03-08T11:46:54+00:00"
         },
         {
             "name": "flarum/emoji",
@@ -2148,16 +2148,16 @@
         },
         {
             "name": "flarum/nicknames",
-            "version": "v1.8.2",
+            "version": "v1.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/nicknames.git",
-                "reference": "ab4ab706ea778f26fb923b31a3f3a2f76c5ecbc6"
+                "reference": "dc9f36bf6667d038dbd33dc6ae59bc75630263a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/nicknames/zipball/ab4ab706ea778f26fb923b31a3f3a2f76c5ecbc6",
-                "reference": "ab4ab706ea778f26fb923b31a3f3a2f76c5ecbc6",
+                "url": "https://api.github.com/repos/flarum/nicknames/zipball/dc9f36bf6667d038dbd33dc6ae59bc75630263a3",
+                "reference": "dc9f36bf6667d038dbd33dc6ae59bc75630263a3",
                 "shasum": ""
             },
             "require": {
@@ -2224,7 +2224,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2024-10-26T22:15:50+00:00"
+            "time": "2026-03-06T17:04:27+00:00"
         },
         {
             "name": "flarum/pusher",
