@@ -1351,16 +1351,16 @@
         },
         {
             "name": "flarum/core",
-            "version": "v1.8.13",
+            "version": "v1.8.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/flarum-core.git",
-                "reference": "9043e420714058b54abc988c285c8117ebd31aa7"
+                "reference": "2aed079055394e1156a57c0be7f3cf02d37a4d71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/9043e420714058b54abc988c285c8117ebd31aa7",
-                "reference": "9043e420714058b54abc988c285c8117ebd31aa7",
+                "url": "https://api.github.com/repos/flarum/flarum-core/zipball/2aed079055394e1156a57c0be7f3cf02d37a4d71",
+                "reference": "2aed079055394e1156a57c0be7f3cf02d37a4d71",
                 "shasum": ""
             },
             "require": {
@@ -1493,7 +1493,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2026-02-09T11:39:21+00:00"
+            "time": "2026-03-08T11:46:54+00:00"
         },
         {
             "name": "flarum/emoji",
@@ -1648,16 +1648,16 @@
         },
         {
             "name": "flarum/gdpr",
-            "version": "v1.8.1",
+            "version": "v1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flarum/gdpr.git",
-                "reference": "4a573bbbaab3027801100d03b896f702404c72b8"
+                "reference": "d19eec73ddb2d6d0322f277a880e7aa57ef00e30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flarum/gdpr/zipball/4a573bbbaab3027801100d03b896f702404c72b8",
-                "reference": "4a573bbbaab3027801100d03b896f702404c72b8",
+                "url": "https://api.github.com/repos/flarum/gdpr/zipball/d19eec73ddb2d6d0322f277a880e7aa57ef00e30",
+                "reference": "d19eec73ddb2d6d0322f277a880e7aa57ef00e30",
                 "shasum": ""
             },
             "require": {
@@ -1749,7 +1749,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2026-03-02T20:57:07+00:00"
+            "time": "2026-03-08T10:32:23+00:00"
         },
         {
             "name": "flarum/lang-english",
@@ -10384,9 +10384,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "flarum/gdpr": 10
-    },
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {},
