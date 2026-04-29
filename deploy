@@ -19,7 +19,7 @@ rsync -pcv --chmod=F644 --fsync --preallocate valkey/valkey.conf $remote:/etc/va
 rsync -pcv --chmod=F644 --fsync --preallocate tmpfiles.d/valkey.conf $remote:/etc/tmpfiles.d/valkey.conf
 ssh $remote 'id -u flarum &>/dev/null || useradd -r flarum -md /opt/flarum -s /usr/bin/nologin &&
 id -u flarum-admin &>/dev/null || useradd -r flarum-admin -md /var/lib/flarum-admin -s /usr/bin/fish &&
-id -u geoipupdate &>/dev/null || useradd -r geoipupdate -d /var/lib/GeoIP && chown -R geoipupdate:geoipupdate /var/lib/GeoIP &&
+id -u geoipupdate &>/dev/null || useradd -r geoipupdate -md /var/lib/GeoIP && chown -R geoipupdate:geoipupdate /var/lib/GeoIP &&
 usermod -aG valkey flarum && usermod -aG valkey flarum-admin && usermod -aG io_uring mysql'
 ssh $remote chmod 750 /var/lib/valkey
 
