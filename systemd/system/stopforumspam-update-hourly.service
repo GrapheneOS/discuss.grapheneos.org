@@ -5,6 +5,7 @@ Description=Stop Forum Spam hourly data update
 CapabilityBoundingSet=
 CPUSchedulingPolicy=batch
 ExecStart=/usr/local/bin/stopforumspam-update hourly
+ExecStartPost=+/usr/bin/systemctl reload nginx
 IOSchedulingPriority=7
 LockPersonality=true
 MemoryDenyWriteExecute=true
