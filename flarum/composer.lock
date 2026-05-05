@@ -5317,16 +5317,16 @@
         },
         {
             "name": "laminas/laminas-stratigility",
-            "version": "4.3.0",
+            "version": "4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-stratigility.git",
-                "reference": "3413771ac42d096a108236f2790bba6803df8a27"
+                "reference": "32be07e85cff5a3ba97ba14ff57ead04eade4051"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-stratigility/zipball/3413771ac42d096a108236f2790bba6803df8a27",
-                "reference": "3413771ac42d096a108236f2790bba6803df8a27",
+                "url": "https://api.github.com/repos/laminas/laminas-stratigility/zipball/32be07e85cff5a3ba97ba14ff57ead04eade4051",
+                "reference": "32be07e85cff5a3ba97ba14ff57ead04eade4051",
                 "shasum": ""
             },
             "require": {
@@ -5391,7 +5391,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2025-10-14T20:48:06+00:00"
+            "time": "2026-05-03T18:04:42+00:00"
         },
         {
             "name": "laravel/serializable-closure",
