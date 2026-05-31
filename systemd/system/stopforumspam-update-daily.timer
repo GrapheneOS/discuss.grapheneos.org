@@ -4,7 +4,7 @@ Description=Stop Forum Spam daily data update
 [Timer]
 OnCalendar=daily
 AccuracySec=1h
-Persistent=true
+Persistent=yes
 
 [Install]
 WantedBy=timers.target

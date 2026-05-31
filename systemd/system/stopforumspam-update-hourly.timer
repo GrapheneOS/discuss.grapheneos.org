@@ -4,7 +4,7 @@ Description=Stop Forum Spam hourly data update
 [Timer]
 OnCalendar=hourly
 AccuracySec=5m
-Persistent=true
+Persistent=yes
 
 [Install]
 WantedBy=timers.target
