@@ -33,7 +33,7 @@ RestrictRealtime=yes
 RestrictSUIDSGID=yes
 SystemCallArchitectures=native
 SystemCallFilter=@system-service
-SystemCallFilter=~@privileged @obsolete
+SystemCallFilter=~@obsolete @privileged
 User=flarum
 WorkingDirectory=/opt/flarum
 
