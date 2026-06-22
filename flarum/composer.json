@@ -27,7 +27,7 @@
         "flarum/core": "^1.5",
         "flarum/emoji": "*",
         "flarum/flags": "*",
-        "flarum/gdpr": "^1.0.0@beta",
+        "flarum/gdpr": "*",
         "flarum/lang-english": "*",
         "flarum/likes": "*",
         "flarum/lock": "*",
