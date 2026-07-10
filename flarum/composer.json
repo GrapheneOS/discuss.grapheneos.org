@@ -41,6 +41,7 @@
         "flarum/suspend": "*",
         "flarum/tags": "*",
         "fof/anti-spam": "*",
+        "fof/disposable-emails": "*",
         "fof/filter": "*",
         "fof/moderator-notes": "*",
         "fof/nightmode": "*",

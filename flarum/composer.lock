@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cdb77dd4406387d4e4fcd16f95c55b68",
+    "content-hash": "37f029d612374758b80a68230d9148f6",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -1064,6 +1064,55 @@
                 }
             ],
             "time": "2020-12-29T14:50:06+00:00"
+        },
+        {
+            "name": "fgribreau/mailchecker",
+            "version": "v4.1.19",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FGRibreau/mailchecker.git",
+                "reference": "4b5dab1c590f09eba94b07210a89816578fe0c51"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FGRibreau/mailchecker/zipball/4b5dab1c590f09eba94b07210a89816578fe0c51",
+                "reference": "4b5dab1c590f09eba94b07210a89816578fe0c51",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "platform/php/MailChecker.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Temporary (disposable/throwaway) email detection library. Covers 1987 fake email providers.",
+            "keywords": [
+                "detection",
+                "disposable",
+                "email",
+                "fake"
+            ],
+            "support": {
+                "issues": "https://github.com/FGRibreau/mailchecker/issues",
+                "source": "https://github.com/FGRibreau/mailchecker/tree/v4.1.19"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/fgribreau",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-07-26T09:53:04+00:00"
         },
         {
             "name": "fig/http-message-util",
@@ -2813,6 +2862,73 @@
                 }
             ],
             "time": "2025-10-17T20:40:01+00:00"
+        },
+        {
+            "name": "fof/disposable-emails",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/disposable-emails.git",
+                "reference": "304cb670eb1b731f6108cc5e5401096e3c41ef2c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/disposable-emails/zipball/304cb670eb1b731f6108cc5e5401096e3c41ef2c",
+                "reference": "304cb670eb1b731f6108cc5e5401096e3c41ef2c",
+                "shasum": ""
+            },
+            "require": {
+                "fgribreau/mailchecker": "^4.0.7",
+                "flarum/core": "^1.0.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flagrow": {
+                    "discuss": "https://discuss.flarum.org/d/20457-friendsofflarum-disposable-emails"
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-user-times",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Disposable Emails",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\DisposableEmails\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Sevilla Martín",
+                    "email": "david.s@redevs.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Prevent users from signing up with disposable emails",
+            "homepage": "https://friendsofflarum.org",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/21894",
+                "issues": "https://github.com/FriendsOfFlarum/disposabile-emails/issues",
+                "source": "https://github.com/FriendsOfFlarum/disposable-emails"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof/donate",
+                    "type": "website"
+                }
+            ],
+            "time": "2021-05-22T18:56:14+00:00"
         },
         {
             "name": "fof/filter",
