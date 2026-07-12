@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37f029d612374758b80a68230d9148f6",
+    "content-hash": "de92b4f856a7ce501f88a782d696810d",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -3098,6 +3098,97 @@
                 }
             ],
             "time": "2026-02-06T10:40:53+00:00"
+        },
+        {
+            "name": "fof/moderator-warnings",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfFlarum/moderator-warnings.git",
+                "reference": "529251281b5358994e5a311da40fa56562bb1d4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/moderator-warnings/zipball/529251281b5358994e5a311da40fa56562bb1d4e",
+                "reference": "529251281b5358994e5a311da40fa56562bb1d4e",
+                "shasum": ""
+            },
+            "require": {
+                "flarum/core": "^1.8.0"
+            },
+            "replace": {
+                "askvortsov/flarum-moderator-warnings": "*"
+            },
+            "require-dev": {
+                "flarum/phpstan": "^1.0.0",
+                "flarum/testing": "^1.0.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": false,
+                        "admin": true,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": false,
+                        "prettier": true,
+                        "typescript": false,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-exclamation-circle",
+                        "color": "#fff",
+                        "backgroundColor": "#e74c3c"
+                    },
+                    "title": "FoF Moderator Warnings",
+                    "category": "feature"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FoF\\ModeratorWarnings\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Skvortsov",
+                    "email": "askvortsov@flarum.org",
+                    "role": "Developer"
+                },
+                {
+                    "name": "IanM",
+                    "email": "ian@flarum.org",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Moderator Warnings extension for flarum.",
+            "keywords": [
+                "flarum"
+            ],
+            "support": {
+                "forum": "https://discuss.flarum.org/d/38529-friendsofflarum-moderator-warnings",
+                "issues": "https://github.com/FriendsOfFlarum/moderator-warnings/issues",
+                "source": "https://github.com/FriendsOfFlarum/moderator-warnings"
+            },
+            "funding": [
+                {
+                    "url": "https://opencollective.com/fof",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2026-02-11T10:23:14+00:00"
         },
         {
             "name": "fof/nightmode",

@@ -44,6 +44,7 @@
         "fof/disposable-emails": "*",
         "fof/filter": "*",
         "fof/moderator-notes": "*",
+        "fof/moderator-warnings": "*",
         "fof/nightmode": "*",
         "fof/redis": "*",
         "fof/sitemap": "*",
