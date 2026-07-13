@@ -1,12 +1,15 @@
 #!/bin/bash
 
+set -o errexit -o nounset -o pipefail
+shopt -s inherit_errexit
+
 cd /opt
 find flarum/public/assets/ \( -name '*.gz' -o -name '*.br' \) -delete
 su flarum-admin -c "rsync -tv --fsync --preallocate flarum-staging/composer.{lock,json} flarum/"
 systemctl stop php-fpm
 su flarum-admin -c "rsync -tvr --delete --fsync --preallocate flarum-staging/vendor/ flarum/vendor"
 chown -R flarum:flarum flarum/public/assets
-su -s /usr/bin/bash flarum -c "cd flarum; php flarum migrate; php flarum cache:clear; php flarum assets:publish; php flarum cache:assets --css --js --locales"
+su -s /usr/bin/bash flarum -c "cd flarum && php flarum migrate && php flarum cache:clear && php flarum assets:publish && php flarum cache:assets --css --js --locales"
 #chown -R flarum-admin:flarum-admin flarum/public/assets
 #chown -R flarum:flarum flarum/public/assets/avatars
 systemctl start php-fpm
