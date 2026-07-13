@@ -1,7 +1,5 @@
 #!/bin/bash
 
-shopt -s extglob nullglob
-
 cd /opt
 find flarum/public/assets/ \( -name '*.gz' -o -name '*.br' \) -delete
 su flarum-admin -c "rsync -tv --fsync --preallocate flarum-staging/composer.{lock,json} flarum/"
