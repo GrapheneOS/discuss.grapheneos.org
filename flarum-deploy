@@ -12,4 +12,7 @@ su -s /usr/bin/bash flarum -c "cd flarum; php flarum migrate; php flarum cache:c
 #chown -R flarum-admin:flarum-admin flarum/public/assets
 #chown -R flarum:flarum flarum/public/assets/avatars
 systemctl start php-fpm
+su flarum-admin -c 'rsync -tv flarum/disposable-email-domains.txt flarum/vendor/fgribreau/mailchecker/list.txt'
+su flarum-admin -c 'cd flarum/vendor/fgribreau/mailchecker && npm install && npm run build'
+systemctl restart php-fpm
 su -s /usr/bin/bash flarum -c flarum-asset-compress

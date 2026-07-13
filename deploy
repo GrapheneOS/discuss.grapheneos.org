@@ -35,3 +35,5 @@ ssh $remote systemctl daemon-reload
 
 rsync -pcv --chmod=644 --fsync --preallocate nginx/{blocked.conf,nginx.conf,mime.types,security-headers.conf} $remote:/etc/nginx/
 ssh $remote systemctl reload nginx
+
+rsync -pcv --chmod=644 --chown flarum-admin:flarum-admin --fsync --preallocate disposable-email-domains.txt $remote:/opt/flarum/

@@ -2,6 +2,7 @@
 /backup-key.txt
 /backup-public-key.txt
 /backup/
+/disposable-email-domains.txt
 /cloud-archive.sh
 /cloud-archive-admin.sh
 /lock
