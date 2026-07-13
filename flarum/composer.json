@@ -23,6 +23,7 @@
     "require": {
         "blomstra/cache-assets": "*",
         "flarum/approval": "*",
+        "flarum/audit": "*",
         "flarum/bbcode": "*",
         "flarum/core": "^1.5",
         "flarum/emoji": "*",

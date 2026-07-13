@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de92b4f856a7ce501f88a782d696810d",
+    "content-hash": "d63cec12a9b68d74778f00638d96b741",
     "packages": [
         {
             "name": "axy/backtrace",
@@ -1320,6 +1320,109 @@
                 }
             ],
             "time": "2024-10-02T11:13:26+00:00"
+        },
+        {
+            "name": "flarum/audit",
+            "version": "v1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flarum/audit.git",
+                "reference": "1c7c3a9f0cedbbbb6bb3e95366958c811ff217a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flarum/audit/zipball/1c7c3a9f0cedbbbb6bb3e95366958c811ff217a7",
+                "reference": "1c7c3a9f0cedbbbb6bb3e95366958c811ff217a7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "flarum/core": "^1.8"
+            },
+            "replace": {
+                "kilowhat/flarum-ext-audit": "*",
+                "kilowhat/flarum-ext-audit-free": "*",
+                "kilowhat/flarum-ext-audit-pro": "*"
+            },
+            "require-dev": {
+                "flarum/approval": "*",
+                "flarum/flags": "*",
+                "flarum/lock": "*",
+                "flarum/nicknames": "*",
+                "flarum/sticky": "*",
+                "flarum/suspend": "*",
+                "flarum/tags": "*",
+                "flarum/testing": "^1.0.0"
+            },
+            "type": "flarum-extension",
+            "extra": {
+                "flarum-cli": {
+                    "modules": {
+                        "js": true,
+                        "css": true,
+                        "admin": true,
+                        "forum": true,
+                        "gitConf": true,
+                        "styleci": true,
+                        "jsCommon": true,
+                        "prettier": true,
+                        "typescript": true,
+                        "bundlewatch": false,
+                        "editorConfig": true,
+                        "githubActions": true,
+                        "backendTesting": true
+                    }
+                },
+                "branch-alias": {
+                    "dev-main": "1.x-dev"
+                },
+                "flarum-extension": {
+                    "icon": {
+                        "name": "fas fa-book",
+                        "color": "#fff",
+                        "backgroundColor": "#2563EB"
+                    },
+                    "title": "Audit",
+                    "category": "feature",
+                    "optional-dependencies": [
+                        "flarum/approval",
+                        "flarum/flags",
+                        "flarum/lock",
+                        "flarum/nicknames",
+                        "flarum/sticky",
+                        "flarum/suspend",
+                        "flarum/tags",
+                        "fof/geoip"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Flarum\\Audit\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Keep an audit log of moderation and administration actions.",
+            "homepage": "https://flarum.org",
+            "keywords": [
+                "moderation"
+            ],
+            "support": {
+                "docs": "https://docs.flarum.org/extensions/audit",
+                "forum": "https://discuss.flarum.org",
+                "issues": "https://github.com/flarum/framework/issues",
+                "source": "https://github.com/flarum/audit"
+            },
+            "funding": [
+                {
+                    "url": "https://flarum.org/donate/",
+                    "type": "website"
+                }
+            ],
+            "time": "2026-06-15T12:00:16+00:00"
         },
         {
             "name": "flarum/bbcode",
