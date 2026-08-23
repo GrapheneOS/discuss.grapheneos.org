@@ -27,7 +27,7 @@ if [[ $mode == hourly ]]; then
     curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1.zip | gunzip > stopforumspam-listed_ip_1.txt.new
     mv stopforumspam-listed_ip_1.txt.new stopforumspam-listed_ip_1.txt
 
-    sort -u torbulkexitlist.txt | awk '{ print $1 " 1;" }' > registration-ip-allowlist.conf.new
+    sort -u registration-ip-allowlist-local.txt torbulkexitlist.txt | awk '{ print $1 " 1;" }' > registration-ip-allowlist.conf.new
     mv registration-ip-allowlist.conf.new registration-ip-allowlist.conf
 
     sort -u registration-ip-blocklist-local.txt spamhaus_drop_v4.txt stopforumspam-toxic_ip_cidr.txt stopforumspam-listed_ip_30.txt stopforumspam-listed_ip_1.txt | awk '{ print $1 " 1;" }' > registration-ip-blocklist.conf.new
