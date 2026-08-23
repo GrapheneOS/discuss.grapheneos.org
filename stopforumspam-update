@@ -14,6 +14,9 @@ if [[ $mode == daily ]]; then
 
     curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30.zip | gunzip > stopforumspam-listed_ip_30.txt.new
     mv stopforumspam-listed_ip_30.txt.new stopforumspam-listed_ip_30.txt
+
+    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30_ipv6.zip | gunzip | sed 's|$|/64|' > stopforumspam-listed_ip_30_ipv6.txt.new
+    mv stopforumspam-listed_ip_30_ipv6.txt.new stopforumspam-listed_ip_30_ipv6.txt
 fi
 
 if [[ $mode == hourly ]]; then
@@ -27,9 +30,12 @@ if [[ $mode == hourly ]]; then
     curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1.zip | gunzip > stopforumspam-listed_ip_1.txt.new
     mv stopforumspam-listed_ip_1.txt.new stopforumspam-listed_ip_1.txt
 
+    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1_ipv6.zip | gunzip | sed 's|$|/64|' > stopforumspam-listed_ip_1_ipv6.txt.new
+    mv stopforumspam-listed_ip_1_ipv6.txt.new stopforumspam-listed_ip_1_ipv6.txt
+
     sort -u registration-ip-allowlist-local.txt torbulkexitlist.txt | awk '{ print $1 " 1;" }' > registration-ip-allowlist.conf.new
     mv registration-ip-allowlist.conf.new registration-ip-allowlist.conf
 
-    sort -u registration-ip-blocklist-local.txt spamhaus_drop_v4.txt stopforumspam-toxic_ip_cidr.txt stopforumspam-listed_ip_{30,1}.txt | awk '{ print $1 " 1;" }' > registration-ip-blocklist.conf.new
+    sort -u registration-ip-blocklist-local.txt spamhaus_drop_v4.txt stopforumspam-toxic_ip_cidr.txt stopforumspam-listed_ip_{30,1}{,_ipv6}.txt | awk '{ print $1 " 1;" }' > registration-ip-blocklist.conf.new
     mv registration-ip-blocklist.conf.new registration-ip-blocklist.conf
 fi
