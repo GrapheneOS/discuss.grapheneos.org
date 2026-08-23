@@ -6,5 +6,6 @@
 /cloud-archive.sh
 /cloud-archive-admin.sh
 /lock
+/nginx/registration-ip-allowlist-local.txt
 /nginx/registration-ip-blocklist-local.txt
 /venv/
