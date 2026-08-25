@@ -30,6 +30,9 @@ if [[ $mode == hourly ]]; then
     curl -sS --fail-with-body https://www.spamhaus.org/drop/drop_v6.json | jq -r 'select(.type == null) | .cidr' > spamhaus_drop_v6.txt.new
     mv spamhaus_drop_v6.txt.new spamhaus_drop_v6.txt
 
+    curl -sS --fail-with-body https://lists.blocklist.de/lists/all.txt > blocklist.de.txt.new
+    mv blocklist.de.txt.new blocklist.de.txt
+
     curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1.zip | gunzip > stopforumspam-listed_ip_1.txt.new
     mv stopforumspam-listed_ip_1.txt.new stopforumspam-listed_ip_1.txt
 
@@ -39,6 +42,6 @@ if [[ $mode == hourly ]]; then
     sort -u registration-ip-allowlist-local.txt torbulkexitlist.txt | sed 's/$/ 1;/' > registration-ip-allowlist.conf.new
     mv registration-ip-allowlist.conf.new registration-ip-allowlist.conf
 
-    sort -u registration-ip-blocklist-local.txt spamhaus_drop_{v4,v6}.txt stopforumspam-toxic_ip_cidr.txt stopforumspam-listed_ip_{30,1}{,_ipv6}.txt | sed 's/$/ 1;/' > registration-ip-blocklist.conf.new
+    sort -u registration-ip-blocklist-local.txt spamhaus_drop_{v4,v6}.txt stopforumspam-toxic_ip_cidr.txt stopforumspam-listed_ip_{30,1}{,_ipv6}.txt blocklist.de.txt | sed 's/$/ 1;/' > registration-ip-blocklist.conf.new
     mv registration-ip-blocklist.conf.new registration-ip-blocklist.conf
 fi
