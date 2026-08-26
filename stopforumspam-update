@@ -9,39 +9,39 @@ mode="$1"
 [[ $mode == @(daily|hourly) ]] || exit 1
 
 if [[ $mode == daily ]]; then
-    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/toxic_ip_cidr.txt > stopforumspam-toxic_ip_cidr.txt.new
+    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/toxic_ip_cidr.txt | sed 's/$/ stopforumspam-toxic;/' > stopforumspam-toxic_ip_cidr.txt.new
     mv stopforumspam-toxic_ip_cidr.txt.new stopforumspam-toxic_ip_cidr.txt
 
-    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30.zip | gunzip > stopforumspam-listed_ip_30.txt.new
+    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30.zip | gunzip | sed 's/$/ stopforumspam-30;/' > stopforumspam-listed_ip_30.txt.new
     mv stopforumspam-listed_ip_30.txt.new stopforumspam-listed_ip_30.txt
 
-    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30_ipv6.zip | gunzip | sed 's|$|/64|' > stopforumspam-listed_ip_30_ipv6.txt.new
+    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30_ipv6.zip | gunzip | sed 's|$|/64|' | sed 's/$/ stopforumspam-30;/' > stopforumspam-listed_ip_30_ipv6.txt.new
     mv stopforumspam-listed_ip_30_ipv6.txt.new stopforumspam-listed_ip_30_ipv6.txt
 fi
 
 if [[ $mode == hourly ]]; then
-    if curl -sS --fail-with-body https://check.torproject.org/torbulkexitlist > torbulkexitlist.txt.new; then
+    if curl -sS --fail-with-body https://check.torproject.org/torbulkexitlist | sed 's/$/ tor-exit;/' > torbulkexitlist.txt.new; then
         mv torbulkexitlist.txt.new torbulkexitlist.txt
     fi
 
-    curl -sS --fail-with-body https://www.spamhaus.org/drop/drop_v4.json | jq -r 'select(.type == null) | .cidr' > spamhaus_drop_v4.txt.new
+    curl -sS --fail-with-body https://www.spamhaus.org/drop/drop_v4.json | jq -r 'select(.type == null) | .cidr' | sed 's/$/ spamhaus-drop;/' > spamhaus_drop_v4.txt.new
     mv spamhaus_drop_v4.txt.new spamhaus_drop_v4.txt
 
-    curl -sS --fail-with-body https://www.spamhaus.org/drop/drop_v6.json | jq -r 'select(.type == null) | .cidr' > spamhaus_drop_v6.txt.new
+    curl -sS --fail-with-body https://www.spamhaus.org/drop/drop_v6.json | jq -r 'select(.type == null) | .cidr' | sed 's/$/ spamhaus-drop;/' > spamhaus_drop_v6.txt.new
     mv spamhaus_drop_v6.txt.new spamhaus_drop_v6.txt
 
-    curl -sS --fail-with-body https://lists.blocklist.de/lists/all.txt > blocklist.de.txt.new
+    curl -sS --fail-with-body https://lists.blocklist.de/lists/all.txt | sed 's/$/ blocklist.de;/' > blocklist.de.txt.new
     mv blocklist.de.txt.new blocklist.de.txt
 
-    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1.zip | gunzip > stopforumspam-listed_ip_1.txt.new
+    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1.zip | gunzip | sed 's/$/ stopforumspam-1;/' > stopforumspam-listed_ip_1.txt.new
     mv stopforumspam-listed_ip_1.txt.new stopforumspam-listed_ip_1.txt
 
-    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1_ipv6.zip | gunzip | sed 's|$|/64|' > stopforumspam-listed_ip_1_ipv6.txt.new
+    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1_ipv6.zip | gunzip | sed 's|$|/64|' | sed 's/$/ stopforumspam-1;/' > stopforumspam-listed_ip_1_ipv6.txt.new
     mv stopforumspam-listed_ip_1_ipv6.txt.new stopforumspam-listed_ip_1_ipv6.txt
 
-    sort -u registration-ip-allowlist-local.txt torbulkexitlist.txt | sed 's/$/ 1;/' > registration-ip-allowlist.conf.new
+    sort -usk 1,1 registration-ip-allowlist-local.txt torbulkexitlist.txt > registration-ip-allowlist.conf.new
     mv registration-ip-allowlist.conf.new registration-ip-allowlist.conf
 
-    sort -u registration-ip-blocklist-local.txt spamhaus_drop_{v4,v6}.txt stopforumspam-toxic_ip_cidr.txt stopforumspam-listed_ip_{30,1}{,_ipv6}.txt blocklist.de.txt | sed 's/$/ 1;/' > registration-ip-blocklist.conf.new
+    sort -usk 1,1 registration-ip-blocklist-local.txt spamhaus_drop_{v4,v6}.txt stopforumspam-toxic_ip_cidr.txt stopforumspam-listed_ip_{30,1}{,_ipv6}.txt blocklist.de.txt > registration-ip-blocklist.conf.new
     mv registration-ip-blocklist.conf.new registration-ip-blocklist.conf
 fi
