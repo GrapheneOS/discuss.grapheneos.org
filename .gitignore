@@ -7,6 +7,6 @@
 /cloud-archive-admin.sh
 /lock
 /nginx/registration-asn-blocklist.map
-/nginx/registration-ip-allowlist-local.txt
-/nginx/registration-ip-blocklist-local.txt
+/nginx/registration-ip-allowlist-local.geo
+/nginx/registration-ip-blocklist-local.geo
 /venv/

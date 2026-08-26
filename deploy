@@ -33,7 +33,7 @@ rsync -pcv --chown root:geoipupdate --chmod=F640 --fsync --preallocate GeoIP.con
 rsync -prcv --chmod=D755,F644 --fsync --preallocate systemd/system/ $remote:/etc/systemd/system/
 ssh $remote systemctl daemon-reload
 
-rsync -pcv --chmod=644 --fsync --preallocate nginx/{registration-asn-blocklist.map,registration-ip-allowlist-local.txt,registration-ip-blocklist-local.txt,nginx.conf,mime.types,security-headers.conf} $remote:/etc/nginx/
+rsync -pcv --chmod=644 --fsync --preallocate nginx/{registration-asn-blocklist.map,registration-ip-allowlist-local.geo,registration-ip-blocklist-local.geo,nginx.conf,mime.types,security-headers.conf} $remote:/etc/nginx/
 ssh $remote systemctl reload nginx
 
 rsync -pcv --chmod=644 --chown flarum-admin:flarum-admin --fsync --preallocate disposable-email-domains.txt $remote:/opt/flarum/
