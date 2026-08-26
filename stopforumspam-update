@@ -39,9 +39,9 @@ if [[ $mode == hourly ]]; then
     curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1_ipv6.zip | gunzip | sed 's|$|/64|' | sed 's/$/ stopforumspam-1;/' > stopforumspam-listed_ip_1_ipv6.geo.new
     mv stopforumspam-listed_ip_1_ipv6.geo.new stopforumspam-listed_ip_1_ipv6.geo
 
-    sort -usk 1,1 registration-ip-allowlist-local.geo torbulkexitlist.geo > registration-ip-allowlist.geo.new
+    nginx-geo-merge registration-ip-allowlist-local.geo torbulkexitlist.geo > registration-ip-allowlist.geo.new
     mv registration-ip-allowlist.geo.new registration-ip-allowlist.geo
 
-    sort -usk 1,1 registration-ip-blocklist-local.geo spamhaus_drop_{v4,v6}.geo stopforumspam-toxic_ip_cidr.geo stopforumspam-listed_ip_{1,30}{,_ipv6}.geo blocklist.de.geo > registration-ip-blocklist.geo.new
+    nginx-geo-merge registration-ip-blocklist-local.geo spamhaus_drop_{v4,v6}.geo stopforumspam-toxic_ip_cidr.geo stopforumspam-listed_ip_{1,30}{,_ipv6}.geo blocklist.de.geo > registration-ip-blocklist.geo.new
     mv registration-ip-blocklist.geo.new registration-ip-blocklist.geo
 fi

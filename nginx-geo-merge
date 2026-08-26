@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+
+import fileinput
+import sys
+
+from collections import defaultdict
+from ipaddress import ip_network
+
+ipv4 = defaultdict(list)
+ipv6 = defaultdict(list)
+
+for line in fileinput.input():
+    line = line.strip()
+    if line[-1] != ";":
+        sys.exit(1)
+    line = line[:-1]
+    key, value = line.split(" ")
+    network = ip_network(key)
+    values = (ipv4 if network.version == 4 else ipv6)[network]
+    if value not in values:
+        values.append(value)
+
+for family in ipv4, ipv6:
+    for key, value in sorted(family.items(), key=lambda x: x[0]):
+        print(key, " ", ",".join(value), ";", sep="")
