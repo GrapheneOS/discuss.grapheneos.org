@@ -42,6 +42,6 @@ if [[ $mode == hourly ]]; then
     sort -usk 1,1 registration-ip-allowlist-local.geo torbulkexitlist.geo > registration-ip-allowlist.geo.new
     mv registration-ip-allowlist.geo.new registration-ip-allowlist.geo
 
-    sort -usk 1,1 registration-ip-blocklist-local.geo spamhaus_drop_{v4,v6}.geo stopforumspam-toxic_ip_cidr.geo stopforumspam-listed_ip_{30,1}{,_ipv6}.geo blocklist.de.geo > registration-ip-blocklist.geo.new
+    sort -usk 1,1 registration-ip-blocklist-local.geo spamhaus_drop_{v4,v6}.geo stopforumspam-toxic_ip_cidr.geo stopforumspam-listed_ip_{1,30}{,_ipv6}.geo blocklist.de.geo > registration-ip-blocklist.geo.new
     mv registration-ip-blocklist.geo.new registration-ip-blocklist.geo
 fi
