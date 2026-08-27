@@ -8,6 +8,8 @@ mode="$1"
 
 [[ $mode == @(daily|hourly) ]] || exit 1
 
+status=0
+
 if [[ $mode == daily ]]; then
     curl -sS --fail-with-body https://www.stopforumspam.com/downloads/toxic_ip_cidr.txt | sed 's/$/ stopforumspam-toxic;/' > stopforumspam-toxic_ip_cidr.geo.new
     mv stopforumspam-toxic_ip_cidr.geo.new stopforumspam-toxic_ip_cidr.geo
@@ -22,6 +24,9 @@ fi
 if [[ $mode == hourly ]]; then
     if curl -sS --fail-with-body https://check.torproject.org/torbulkexitlist | sed 's/$/ tor-exit;/' > torbulkexitlist.geo.new; then
         mv torbulkexitlist.geo.new torbulkexitlist.geo
+    else
+        echo failed to update torbulkexitlist.geo >&2
+        status=1
     fi
 
     curl -sS --fail-with-body https://www.spamhaus.org/drop/drop_v4.json | jq -r 'select(.type == null) | .cidr' | sed 's/$/ spamhaus-drop;/' > spamhaus_drop_v4.geo.new
@@ -45,3 +50,5 @@ if [[ $mode == hourly ]]; then
     nginx-geo-merge registration-ip-blocklist-local.geo spamhaus_drop_{v4,v6}.geo stopforumspam-toxic_ip_cidr.geo stopforumspam-listed_ip_{1,30}{,_ipv6}.geo blocklist.de.geo > registration-ip-blocklist.geo.new
     mv registration-ip-blocklist.geo.new registration-ip-blocklist.geo
 fi
+
+exit $status
