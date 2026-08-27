@@ -12,10 +12,10 @@ if [[ $mode == daily ]]; then
     curl -sS --fail-with-body https://www.stopforumspam.com/downloads/toxic_ip_cidr.txt | sed 's/$/ stopforumspam-toxic;/' > stopforumspam-toxic_ip_cidr.geo.new
     mv stopforumspam-toxic_ip_cidr.geo.new stopforumspam-toxic_ip_cidr.geo
 
-    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30.zip | gunzip | sed 's/$/ stopforumspam-30;/' > stopforumspam-listed_ip_30.geo.new
+    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30.gz | gunzip | sed 's/$/ stopforumspam-30;/' > stopforumspam-listed_ip_30.geo.new
     mv stopforumspam-listed_ip_30.geo.new stopforumspam-listed_ip_30.geo
 
-    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30_ipv6.zip | gunzip | sed 's|$|/64|' | sed 's/$/ stopforumspam-30;/' > stopforumspam-listed_ip_30_ipv6.geo.new
+    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30_ipv6.gz | gunzip | sed 's|$|/64|' | sed 's/$/ stopforumspam-30;/' > stopforumspam-listed_ip_30_ipv6.geo.new
     mv stopforumspam-listed_ip_30_ipv6.geo.new stopforumspam-listed_ip_30_ipv6.geo
 fi
 
@@ -33,10 +33,10 @@ if [[ $mode == hourly ]]; then
     curl -sS --fail-with-body https://lists.blocklist.de/lists/all.txt | sed 's/$/ blocklist.de;/' > blocklist.de.geo.new
     mv blocklist.de.geo.new blocklist.de.geo
 
-    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1.zip | gunzip | sed 's/$/ stopforumspam-1;/' > stopforumspam-listed_ip_1.geo.new
+    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1.gz | gunzip | sed 's/$/ stopforumspam-1;/' > stopforumspam-listed_ip_1.geo.new
     mv stopforumspam-listed_ip_1.geo.new stopforumspam-listed_ip_1.geo
 
-    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1_ipv6.zip | gunzip | sed 's|$|/64|' | sed 's/$/ stopforumspam-1;/' > stopforumspam-listed_ip_1_ipv6.geo.new
+    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1_ipv6.gz | gunzip | sed 's|$|/64|' | sed 's/$/ stopforumspam-1;/' > stopforumspam-listed_ip_1_ipv6.geo.new
     mv stopforumspam-listed_ip_1_ipv6.geo.new stopforumspam-listed_ip_1_ipv6.geo
 
     nginx-geo-merge registration-ip-allowlist-local.geo torbulkexitlist.geo > registration-ip-allowlist.geo.new
