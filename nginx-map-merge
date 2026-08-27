@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+
+import fileinput
+import sys
+
+from collections import defaultdict
+
+entries = defaultdict(list)
+
+for line in fileinput.input():
+    line = line.strip()
+    if line[-1] != ";":
+        sys.exit(1)
+    line = line[:-1]
+    key, value = line.split(" ")
+    values = entries[key]
+    if value not in values:
+        values.append(value)
+
+for key, value in sorted(entries.items(), key=lambda x: x[0]):
+    print(key, " ", ",".join(value), ";", sep="")

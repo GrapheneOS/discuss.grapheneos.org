@@ -31,6 +31,13 @@ if [[ $mode == daily ]]; then
         echo failed to update stopforumspam-listed_ip_30_ipv6.geo >&2
         status=1
     fi
+
+    if curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_email_90.gz | gunzip | sed 's/$/ stopforumspam-90;/' > stopforumspam-listed_email_90.map.new; then
+        mv stopforumspam-listed_email_90.map.new stopforumspam-listed_email_90.map
+    else
+        echo failed to update stopforumspam-listed_email_90.map >&2
+        status=1
+    fi
 fi
 
 if [[ $mode == hourly ]]; then
@@ -76,11 +83,21 @@ if [[ $mode == hourly ]]; then
         status=1
     fi
 
+    if curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_email_1.gz | gunzip | sed 's/$/ stopforumspam-1;/' > stopforumspam-listed_email_1.map.new; then
+        mv stopforumspam-listed_email_1.map.new stopforumspam-listed_email_1.map
+    else
+        echo failed to update stopforumspam-listed_ip_1.geo >&2
+        status=1
+    fi
+
     nginx-geo-merge registration-ip-allowlist-local.geo torbulkexitlist.geo > registration-ip-allowlist.geo.new
     mv registration-ip-allowlist.geo.new registration-ip-allowlist.geo
 
     nginx-geo-merge registration-ip-blocklist-local.geo spamhaus_drop_{v4,v6}.geo stopforumspam-toxic_ip_cidr.geo stopforumspam-listed_ip_{1,30}{,_ipv6}.geo blocklist.de.geo > registration-ip-blocklist.geo.new
     mv registration-ip-blocklist.geo.new registration-ip-blocklist.geo
+
+    nginx-map-merge registration-email-blocklist-local.map stopforumspam-listed_email_1.map stopforumspam-listed_email_90.map > registration-email-blocklist.map.new
+    mv registration-email-blocklist.map.new registration-email-blocklist.map
 fi
 
 exit $status
