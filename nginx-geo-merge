@@ -16,6 +16,8 @@ for line in fileinput.input():
     line = line[:-1]
     key, value = line.split(" ")
     network = ip_network(key)
+    if network.prefixlen > 64:
+        network = network.supernet(new_prefix=64)
     values = (ipv4 if network.version == 4 else ipv6)[network]
     if value not in values:
         values.append(value)
