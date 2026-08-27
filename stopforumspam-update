@@ -11,14 +11,26 @@ mode="$1"
 status=0
 
 if [[ $mode == daily ]]; then
-    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/toxic_ip_cidr.txt | sed 's/$/ stopforumspam-toxic;/' > stopforumspam-toxic_ip_cidr.geo.new
-    mv stopforumspam-toxic_ip_cidr.geo.new stopforumspam-toxic_ip_cidr.geo
+    if curl -sS --fail-with-body https://www.stopforumspam.com/downloads/toxic_ip_cidr.txt | sed 's/$/ stopforumspam-toxic;/' > stopforumspam-toxic_ip_cidr.geo.new; then
+        mv stopforumspam-toxic_ip_cidr.geo.new stopforumspam-toxic_ip_cidr.geo
+    else
+        echo failed to update stopforumspam-toxic_ip_cidr.geo >&2
+        status=1
+    fi
 
-    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30.gz | gunzip | sed 's/$/ stopforumspam-30;/' > stopforumspam-listed_ip_30.geo.new
-    mv stopforumspam-listed_ip_30.geo.new stopforumspam-listed_ip_30.geo
+    if curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30.gz | gunzip | sed 's/$/ stopforumspam-30;/' > stopforumspam-listed_ip_30.geo.new; then
+        mv stopforumspam-listed_ip_30.geo.new stopforumspam-listed_ip_30.geo
+    else
+        echo failed to update stopforumspam-listed_ip_30.geo >&2
+        status=1
+    fi
 
-    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30_ipv6.gz | gunzip | sed 's|$|/64|' | sed 's/$/ stopforumspam-30;/' > stopforumspam-listed_ip_30_ipv6.geo.new
-    mv stopforumspam-listed_ip_30_ipv6.geo.new stopforumspam-listed_ip_30_ipv6.geo
+    if curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_30_ipv6.gz | gunzip | sed 's|$|/64|' | sed 's/$/ stopforumspam-30;/' > stopforumspam-listed_ip_30_ipv6.geo.new; then
+        mv stopforumspam-listed_ip_30_ipv6.geo.new stopforumspam-listed_ip_30_ipv6.geo
+    else
+        echo failed to update stopforumspam-listed_ip_30_ipv6.geo >&2
+        status=1
+    fi
 fi
 
 if [[ $mode == hourly ]]; then
@@ -29,20 +41,40 @@ if [[ $mode == hourly ]]; then
         status=1
     fi
 
-    curl -sS --fail-with-body https://www.spamhaus.org/drop/drop_v4.json | jq -r 'select(.type == null) | .cidr' | sed 's/$/ spamhaus-drop;/' > spamhaus_drop_v4.geo.new
-    mv spamhaus_drop_v4.geo.new spamhaus_drop_v4.geo
+    if curl -sS --fail-with-body https://www.spamhaus.org/drop/drop_v4.json | jq -r 'select(.type == null) | .cidr' | sed 's/$/ spamhaus-drop;/' > spamhaus_drop_v4.geo.new; then
+        mv spamhaus_drop_v4.geo.new spamhaus_drop_v4.geo
+    else
+        echo failed to update spamhaus_drop_v4.geo >&2
+        status=1
+    fi
 
-    curl -sS --fail-with-body https://www.spamhaus.org/drop/drop_v6.json | jq -r 'select(.type == null) | .cidr' | sed 's/$/ spamhaus-drop;/' > spamhaus_drop_v6.geo.new
-    mv spamhaus_drop_v6.geo.new spamhaus_drop_v6.geo
+    if curl -sS --fail-with-body https://www.spamhaus.org/drop/drop_v6.json | jq -r 'select(.type == null) | .cidr' | sed 's/$/ spamhaus-drop;/' > spamhaus_drop_v6.geo.new; then
+        mv spamhaus_drop_v6.geo.new spamhaus_drop_v6.geo
+    else
+        echo failed to update spamhaus_drop_v6.geo >&2
+        status=1
+    fi
 
-    curl -sS --fail-with-body https://lists.blocklist.de/lists/all.txt | sed 's/$/ blocklist.de;/' > blocklist.de.geo.new
-    mv blocklist.de.geo.new blocklist.de.geo
+    if curl -sS --fail-with-body https://lists.blocklist.de/lists/all.txt | sed 's/$/ blocklist.de;/' > blocklist.de.geo.new; then
+        mv blocklist.de.geo.new blocklist.de.geo
+    else
+        echo failed to update blocklist.de.geo >&2
+        status=1
+    fi
 
-    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1.gz | gunzip | sed 's/$/ stopforumspam-1;/' > stopforumspam-listed_ip_1.geo.new
-    mv stopforumspam-listed_ip_1.geo.new stopforumspam-listed_ip_1.geo
+    if curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1.gz | gunzip | sed 's/$/ stopforumspam-1;/' > stopforumspam-listed_ip_1.geo.new; then
+        mv stopforumspam-listed_ip_1.geo.new stopforumspam-listed_ip_1.geo
+    else
+        echo failed to update stopforumspam-listed_ip_1.geo >&2
+        status=1
+    fi
 
-    curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1_ipv6.gz | gunzip | sed 's|$|/64|' | sed 's/$/ stopforumspam-1;/' > stopforumspam-listed_ip_1_ipv6.geo.new
-    mv stopforumspam-listed_ip_1_ipv6.geo.new stopforumspam-listed_ip_1_ipv6.geo
+    if curl -sS --fail-with-body https://www.stopforumspam.com/downloads/listed_ip_1_ipv6.gz | gunzip | sed 's|$|/64|' | sed 's/$/ stopforumspam-1;/' > stopforumspam-listed_ip_1_ipv6.geo.new; then
+        mv stopforumspam-listed_ip_1_ipv6.geo.new stopforumspam-listed_ip_1_ipv6.geo
+    else
+        echo failed to update stopforumspam-listed_ip_1_ipv6.geo >&2
+        status=1
+    fi
 
     nginx-geo-merge registration-ip-allowlist-local.geo torbulkexitlist.geo > registration-ip-allowlist.geo.new
     mv registration-ip-allowlist.geo.new registration-ip-allowlist.geo
