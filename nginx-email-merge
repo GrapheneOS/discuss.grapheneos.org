@@ -13,6 +13,7 @@ for line in fileinput.input():
         sys.exit(1)
     line = line[:-1]
     key, value = line.split(" ")
+    key = key.replace("googlemail.com", "gmail.com")
     values = entries[key]
     if value not in values:
         values.append(value)
