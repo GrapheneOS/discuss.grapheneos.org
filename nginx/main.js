@@ -19,7 +19,7 @@ async function extractEmail(r) {
         return;
     }
     const domain = parts[1];
-    if (domain == "gmail.com") {
+    if (domain === "gmail.com") {
         const username = parts[0].split('+')[0].replaceAll(".", "");
         r.variables.extracted_email = username + "@" + domain;
     } else {
