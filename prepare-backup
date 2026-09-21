@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -o errexit -o nounset -o pipefail
+
+destination="$1"
+timestamp="$2"
+
+rm -rf "$destination"
+mkdir "$destination"
+
+mkdir "$destination/$timestamp"
+mariadb-dump --all-databases --single-transaction > "$destination/$timestamp/all_databases.sql"
+cp /var/lib/valkey/dump.rdb "$destination/$timestamp/"
+rsync -rl --exclude '/storage/cache/*' --exclude '/storage/gdpr-exports/*' --exclude '/storage/sessions/*' --exclude '/storage/tmp/*' /opt/flarum/ "$destination/$timestamp/flarum"
+tar -cC "$destination" "$timestamp" | zstd -9 --long | age -r $(cat backup-public-key.txt) -o "$destination/$timestamp.tar.zst.age"
