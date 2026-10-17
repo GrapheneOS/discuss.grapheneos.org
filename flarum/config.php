@@ -1,7 +1,7 @@
 <?php return [
   'debug' => false,
   'database' => [
-    'driver' => 'mysql',
+    'driver' => 'mariadb',
     'unix_socket' => '/run/mysqld/mysqld.sock',
     'database' => 'flarum',
     'username' => 'flarum',
