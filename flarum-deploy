@@ -4,16 +4,13 @@ set -o errexit -o nounset -o pipefail
 shopt -s inherit_errexit
 
 cd /opt
-su flarum-admin -c "find flarum/public/assets/ \( -name '*.gz' -o -name '*.br' \) -delete"
-su flarum-admin -c "rsync -tv --fsync --preallocate flarum-staging/composer.{lock,json} flarum/"
+su -s /usr/bin/bash flarum -c "find flarum/public/assets/ \( -name '*.gz' -o -name '*.br' \) -delete"
+su -s /usr/bin/bash flarum -c "rsync -tv --fsync --preallocate flarum-staging/composer.{lock,json} flarum/"
 systemctl stop php-fpm
-su flarum-admin -c "rsync -tvr --delete --fsync --preallocate flarum-staging/vendor/ flarum/vendor"
-chown -R flarum:flarum flarum/public/assets
+su -s /usr/bin/bash flarum -c "rsync -tvr --delete --fsync --preallocate flarum-staging/vendor/ flarum/vendor"
 su -s /usr/bin/bash flarum -c "cd flarum && php flarum migrate && php flarum cache:clear && php flarum assets:publish"
-#chown -R flarum-admin:flarum-admin flarum/public/assets
-#chown -R flarum:flarum flarum/public/assets/avatars
 systemctl start php-fpm
-su flarum-admin -c 'rsync -tv flarum/disposable-email-domains.txt flarum/vendor/fgribreau/mailchecker/list.txt'
-su flarum-admin -c 'cd flarum/vendor/fgribreau/mailchecker && npm install && npm run build'
+su -s /usr/bin/bash flarum -c 'rsync -tv flarum/disposable-email-domains.txt flarum/vendor/fgribreau/mailchecker/list.txt'
+su -s /usr/bin/bash flarum -c 'cd flarum/vendor/fgribreau/mailchecker && npm install && npm run build'
 systemctl restart php-fpm
 su -s /usr/bin/bash flarum -c flarum-asset-compress
