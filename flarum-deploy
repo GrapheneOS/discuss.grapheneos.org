@@ -4,7 +4,7 @@ set -o errexit -o nounset -o pipefail
 shopt -s inherit_errexit
 
 cd /opt
-find flarum/public/assets/ \( -name '*.gz' -o -name '*.br' \) -delete
+su flarum-admin -c "find flarum/public/assets/ \( -name '*.gz' -o -name '*.br' \) -delete"
 su flarum-admin -c "rsync -tv --fsync --preallocate flarum-staging/composer.{lock,json} flarum/"
 systemctl stop php-fpm
 su flarum-admin -c "rsync -tvr --delete --fsync --preallocate flarum-staging/vendor/ flarum/vendor"
