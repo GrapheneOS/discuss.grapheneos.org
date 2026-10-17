@@ -23,9 +23,7 @@
     "require": {
         "flarum/approval": "*",
         "flarum/audit": "*",
-        "flarum/bbcode": "*",
         "flarum/core": "^2.0",
-        "flarum/emoji": "*",
         "flarum/flags": "*",
         "flarum/gdpr": "*",
         "flarum/lang-english": "*",
@@ -33,8 +31,6 @@
         "flarum/lock": "*",
         "flarum/markdown": "*",
         "flarum/mentions": "*",
-        "flarum/nicknames": "*",
-        "flarum/pusher": "*",
         "flarum/statistics": "*",
         "flarum/sticky": "*",
         "flarum/subscriptions": "*",
