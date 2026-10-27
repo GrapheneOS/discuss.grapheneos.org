@@ -871,23 +871,23 @@
         },
         {
             "name": "doctrine/inflector",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "6d6c96277ea252fc1304627204c3d5e6e15faa3b"
+                "reference": "46351b6812b7b6d52b82c3efa5dfb786a198ec88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/6d6c96277ea252fc1304627204c3d5e6e15faa3b",
-                "reference": "6d6c96277ea252fc1304627204c3d5e6e15faa3b",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/46351b6812b7b6d52b82c3efa5dfb786a198ec88",
+                "reference": "46351b6812b7b6d52b82c3efa5dfb786a198ec88",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^12.0 || ^13.0",
+                "doctrine/coding-standard": "^12.0 || ^14.0",
                 "phpstan/phpstan": "^1.12 || ^2.0",
                 "phpstan/phpstan-phpunit": "^1.4 || ^2.0",
                 "phpstan/phpstan-strict-rules": "^1.6 || ^2.0",
@@ -941,7 +941,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/inflector/issues",
-                "source": "https://github.com/doctrine/inflector/tree/2.1.0"
+                "source": "https://github.com/doctrine/inflector/tree/2.1.1"
             },
             "funding": [
                 {
@@ -957,7 +957,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-08-10T19:31:58+00:00"
+            "time": "2026-10-26T08:14:14+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -2968,16 +2968,16 @@
         },
         {
             "name": "fof/anti-spam",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/anti-spam.git",
-                "reference": "a8dd887c767de64a1bdafa48992ff777fc308130"
+                "reference": "a29359099e1c00ecd6bf5cbea864a1ba6a6404ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/anti-spam/zipball/a8dd887c767de64a1bdafa48992ff777fc308130",
-                "reference": "a8dd887c767de64a1bdafa48992ff777fc308130",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/anti-spam/zipball/a29359099e1c00ecd6bf5cbea864a1ba6a6404ff",
+                "reference": "a29359099e1c00ecd6bf5cbea864a1ba6a6404ff",
                 "shasum": ""
             },
             "require": {
@@ -3072,7 +3072,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2026-10-18T22:33:16+00:00"
+            "time": "2026-10-23T10:45:28+00:00"
         },
         {
             "name": "fof/disposable-emails",
@@ -3227,16 +3227,16 @@
         },
         {
             "name": "fof/moderator-notes",
-            "version": "2.0.0-rc.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/moderator-notes.git",
-                "reference": "1d643dbbf5cdfb7bbafff49c60d3546c85dbc771"
+                "reference": "cd0cabb5c677140044e964454ea34555d7ae5f88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/moderator-notes/zipball/1d643dbbf5cdfb7bbafff49c60d3546c85dbc771",
-                "reference": "1d643dbbf5cdfb7bbafff49c60d3546c85dbc771",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/moderator-notes/zipball/cd0cabb5c677140044e964454ea34555d7ae5f88",
+                "reference": "cd0cabb5c677140044e964454ea34555d7ae5f88",
                 "shasum": ""
             },
             "require": {
@@ -3310,20 +3310,20 @@
                     "type": "website"
                 }
             ],
-            "time": "2026-07-26T14:59:57+00:00"
+            "time": "2026-10-23T08:44:21+00:00"
         },
         {
             "name": "fof/moderator-warnings",
-            "version": "2.0.0-rc.3",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/moderator-warnings.git",
-                "reference": "c9f408650cc3b8db5c9f63d5a2c26d4103f408dc"
+                "reference": "7a1d09207c3949386b755287f6e50a93a28d48ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/moderator-warnings/zipball/c9f408650cc3b8db5c9f63d5a2c26d4103f408dc",
-                "reference": "c9f408650cc3b8db5c9f63d5a2c26d4103f408dc",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/moderator-warnings/zipball/7a1d09207c3949386b755287f6e50a93a28d48ed",
+                "reference": "7a1d09207c3949386b755287f6e50a93a28d48ed",
                 "shasum": ""
             },
             "require": {
@@ -3405,7 +3405,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2026-08-13T14:37:59+00:00"
+            "time": "2026-10-23T08:10:26+00:00"
         },
         {
             "name": "fof/redis",
@@ -3474,16 +3474,16 @@
         },
         {
             "name": "fof/sitemap",
-            "version": "3.0.0-beta.6",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/sitemap.git",
-                "reference": "35840c9ec5a07506009cc8a5cf6135db2e67fe00"
+                "reference": "1971b04a4c1509e2bbd2f69624f63eeeb807a428"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/sitemap/zipball/35840c9ec5a07506009cc8a5cf6135db2e67fe00",
-                "reference": "35840c9ec5a07506009cc8a5cf6135db2e67fe00",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/sitemap/zipball/1971b04a4c1509e2bbd2f69624f63eeeb807a428",
+                "reference": "1971b04a4c1509e2bbd2f69624f63eeeb807a428",
                 "shasum": ""
             },
             "require": {
@@ -3573,20 +3573,20 @@
                     "type": "website"
                 }
             ],
-            "time": "2026-04-27T11:49:03+00:00"
+            "time": "2026-10-23T16:56:26+00:00"
         },
         {
             "name": "fof/user-bio",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfFlarum/user-bio.git",
-                "reference": "a6497c54c895a166e3f4f5137d536302b89b2306"
+                "reference": "e5b96c93916155059380ec81a3a9ed43e1daa3d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfFlarum/user-bio/zipball/a6497c54c895a166e3f4f5137d536302b89b2306",
-                "reference": "a6497c54c895a166e3f4f5137d536302b89b2306",
+                "url": "https://api.github.com/repos/FriendsOfFlarum/user-bio/zipball/e5b96c93916155059380ec81a3a9ed43e1daa3d3",
+                "reference": "e5b96c93916155059380ec81a3a9ed43e1daa3d3",
                 "shasum": ""
             },
             "require": {
@@ -3664,7 +3664,7 @@
                     "type": "website"
                 }
             ],
-            "time": "2026-10-13T11:58:01+00:00"
+            "time": "2026-10-23T10:24:53+00:00"
         },
         {
             "name": "franzl/whoops-middleware",
@@ -3712,16 +3712,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.16.0",
+            "version": "7.16.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "ffb62ec787050ae4fa9449cdd6b80335db69bda2"
+                "reference": "81755d989b3007ca7f88a069857553cd08e7dc2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/ffb62ec787050ae4fa9449cdd6b80335db69bda2",
-                "reference": "ffb62ec787050ae4fa9449cdd6b80335db69bda2",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/81755d989b3007ca7f88a069857553cd08e7dc2e",
+                "reference": "81755d989b3007ca7f88a069857553cd08e7dc2e",
                 "shasum": ""
             },
             "require": {
@@ -3820,7 +3820,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.16.0"
+                "source": "https://github.com/guzzle/guzzle/tree/7.16.1"
             },
             "funding": [
                 {
@@ -3836,7 +3836,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-18T13:38:36+00:00"
+            "time": "2026-10-25T21:35:21+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -7086,16 +7086,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.15.0",
+            "version": "3.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CarbonPHP/carbon.git",
-                "reference": "217d38553209bdb44e01590d9e9a2e4df8354cce"
+                "reference": "ce0e5636fae7d1e99856eb70cae4c719a284aa08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/217d38553209bdb44e01590d9e9a2e4df8354cce",
-                "reference": "217d38553209bdb44e01590d9e9a2e4df8354cce",
+                "url": "https://api.github.com/repos/CarbonPHP/carbon/zipball/ce0e5636fae7d1e99856eb70cae4c719a284aa08",
+                "reference": "ce0e5636fae7d1e99856eb70cae4c719a284aa08",
                 "shasum": ""
             },
             "require": {
@@ -7188,7 +7188,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-10-18T18:27:53+00:00"
+            "time": "2026-10-25T14:32:48+00:00"
         },
         {
             "name": "nette/schema",
