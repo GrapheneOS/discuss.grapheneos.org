@@ -31,7 +31,7 @@
         "flarum/lock": "*",
         "flarum/markdown": "*",
         "flarum/mentions": "*",
-        "flarum/messages": "^2.0",
+        "flarum/messages": "*",
         "flarum/statistics": "*",
         "flarum/sticky": "*",
         "flarum/subscriptions": "*",
