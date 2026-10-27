@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "db078443cdaa1100ce97a57bbb3b5370",
+    "content-hash": "edfa43e556f9cbef7610bb9831e3b58d",
     "packages": [
         {
             "name": "asispts/http-accept",
@@ -11757,10 +11757,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "fof/disposable-emails": 10,
-        "fof/filter": 10,
-        "fof/moderator-notes": 5,
-        "fof/moderator-warnings": 5,
-        "fof/sitemap": 10
+        "fof/filter": 10
     },
     "prefer-stable": false,
     "prefer-lowest": false,

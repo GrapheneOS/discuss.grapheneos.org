@@ -40,10 +40,10 @@
         "fof/anti-spam": "*",
         "fof/disposable-emails": "^2.0.0-beta.1",
         "fof/filter": "^2.0.0-beta.1",
-        "fof/moderator-notes": "^2.0.0-rc.1",
-        "fof/moderator-warnings": "^2.0.0-rc.3",
+        "fof/moderator-notes": "*",
+        "fof/moderator-warnings": "*",
         "fof/redis": "*",
-        "fof/sitemap": "^3.0.0-beta.6",
+        "fof/sitemap": "*",
         "fof/user-bio": "*"
     },
     "config": {
