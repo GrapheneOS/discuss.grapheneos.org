@@ -14,7 +14,6 @@ return [
     (new Extend\Frontend('forum'))
         ->content(function (Document $document) {
             $document->head[] = '
-<meta name="msapplication-TileColor" content="#ffffff"/>
 <meta name="twitter:site" content="@GrapheneOS"/>
 <meta property="og:image" content="https://discuss.grapheneos.org/opengraph.png"/>
 <meta property="og:image:width" content="512"/>
