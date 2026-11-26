@@ -15,6 +15,6 @@ chown -R flarum-admin:flarum-admin flarum/public/assets/
 chown -R flarum:flarum flarum/public/assets/avatars/
 systemctl start php-fpm.service flarum-queue.service flarum-schedule.timer
 su flarum-admin -c 'rsync -tv flarum/disposable-email-domains.txt flarum/vendor/fgribreau/mailchecker/list.txt'
-su flarum-admin -c 'cd flarum/vendor/fgribreau/mailchecker && npm install && npm run build'
+su flarum-admin -c 'cd flarum/vendor/fgribreau/mailchecker && npm ci --ignore-scripts && npm run build'
 systemctl restart php-fpm.service
 su flarum-admin -c flarum-asset-compress
